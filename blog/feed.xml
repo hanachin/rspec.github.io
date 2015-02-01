@@ -1,0 +1,2135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>RSpec</title>
+  <subtitle>The Official RSpec Blog</subtitle>
+  <id>http://rspec.info/blog</id>
+  <link href="http://rspec.info/blog"/>
+  <link href="http://rspec.info/blog/blog/feed.xml" rel="self"/>
+  <updated>2015-01-30T11:00:00+11:00</updated>
+  <author>
+    <name>The RSpec Core Team</name>
+  </author>
+  <entry>
+    <title>New RSpec Gem signing certificate</title>
+    <link rel="alternate" href="http://rspec.info/blog/2015/01/new-gem-signing-certificate/"/>
+    <id>http://rspec.info/blog/2015/01/new-gem-signing-certificate/</id>
+    <published>2015-01-30T11:00:00+11:00</published>
+    <updated>2015-02-01T11:11:08+11:00</updated>
+    <author>
+      <name>Sam Phippen</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;strong&gt;TL;DR If you rely on our signing of RSpec releases you'll have to get a new cert from us&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;For the upcoming release of RSpec 3.2 we've created a new signing certificate
+for the RSpec gems. The reason for this change is that
+&lt;a href="https://github.com/rspec/rspec/blob/6af4995482ade2d49ad361ee003dee29f713ab17/certs/rspec.pem"&gt;our old certificate&lt;/a&gt;
+expired. Rubygems certificates have a 1 year expiry by default. The new certificate can be found
+&lt;a href="https://github.com/rspec/rspec/blob/858e0c2ac849d941bfd5b3a5c5e04a4f596fe666/certs/rspec.pem"&gt;on GitHub&lt;/a&gt;
+and has a 10 year expiry, so you can expect it to be used to verify all of the
+RSpec gems for a while. The expiry of our old certificate means there won't be
+any more RSpec 3.0.x or 3.1.x releases as we don't want to sign them with
+conflicting certificates.&lt;/p&gt;
+
+&lt;p&gt;With the new certificate comes a new way of our end users ensuring that the
+certificate is the correct one. A number of the RSpec core team members
+will be adding &lt;a href="https://www.gnupg.org/gph/en/manual.html#AEN161"&gt;detatched GPG signatures&lt;/a&gt; to
+the core RSpec gem repository. This way, if you meet one of them in real life, you can
+validate that the certificate that you have is the same one we hosted. The first signature,
+&lt;a href="https://github.com/rspec/rspec/blob/858e0c2ac849d941bfd5b3a5c5e04a4f596fe666/certs/samphippen.asc"&gt;mine&lt;/a&gt;, is
+available on GitHub now. If I meet you at any conference, I'll be happy to do a key signing
+with you so that you can ensure that you've got the real certificate.&lt;/p&gt;
+
+&lt;p&gt;Over the next few months, we'll be adding more signatures from other members of
+the core team so that it is easier for you to validate the certificate.&lt;/p&gt;
+
+&lt;h2 id="how-does-this-affect-me"&gt;How does this affect me?&lt;/h2&gt;
+
+&lt;p&gt;This only affects people that already use the Rubygems signing security feature
+for RSpec. If you've never checked the certificate you don't need to do anything.
+If you are using the old RSpec certificate you'll need to move to the new one.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>New RSpec Website!</title>
+    <link rel="alternate" href="http://rspec.info/blog/2015/01/new-rspec-website/"/>
+    <id>http://rspec.info/blog/2015/01/new-rspec-website/</id>
+    <published>2015-01-29T11:00:00+11:00</published>
+    <updated>2015-02-01T11:11:08+11:00</updated>
+    <author>
+      <name>Myron Marston</name>
+    </author>
+    <content type="html">&lt;p&gt;RSpec's website has been in need of a refresh for a long time. We've
+been working on this new site, off and on, for more than a year, and
+we're glad to finally ship it. We hope that it'll prove much
+more useful to the community than the old site, particularly since it
+now hosts our &lt;a href="/documentation"&gt;documentation&lt;/a&gt; and our &lt;a href="/blog"&gt;blog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I'd like to thank all the people who helped make this site happen:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://ninefold.com/"&gt;Ninefold&lt;/a&gt;, who sponsored the development of
+the site and are covering its on-going costs.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://pistachiomade.com/"&gt;Katie Chen&lt;/a&gt;, who came up with the logo and
+new design.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://mootpointer.com/"&gt;Andrew Harvey&lt;/a&gt;,
+&lt;a href="https://github.com/sjahandideh"&gt;Shamim Jahandideh&lt;/a&gt;, and
+&lt;a href="http://jonrowe.co.uk/"&gt;Jon Rowe&lt;/a&gt;, who helped develop the site.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://cohitre.com/"&gt;Carlos Rodriguez&lt;/a&gt; and Brandon Renfrow, who helped out with the CSS.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;While what we have now is a huge improvement, it's still not as polished
+as we would like, and we're hoping folks from the community will chip in
+and help us iteratively improve it. The blog in particular – which I
+helped put together – is badly in need of some CSS improvements, but my
+CSS skills are very poor.&lt;/p&gt;
+
+&lt;p&gt;If you'd like to help us out, head over to the &lt;a href="https://github.com/rspec/rspec.github.io"&gt;GitHub
+repo&lt;/a&gt; and either open an issue
+to suggest improvements or submit a pull request.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>RSpec 3.1 has been released!</title>
+    <link rel="alternate" href="http://rspec.info/blog/2014/09/rspec-3-1-has-been-released/"/>
+    <id>http://rspec.info/blog/2014/09/rspec-3-1-has-been-released/</id>
+    <published>2014-09-04T10:00:00+10:00</published>
+    <updated>2015-01-29T21:49:36+11:00</updated>
+    <author>
+      <name>Myron Marston</name>
+    </author>
+    <content type="html">&lt;p&gt;RSpec 3.1 has just been released! Given our commitment to
+&lt;a href="http://semver.org/"&gt;semantic versioning&lt;/a&gt;, this should be a trivial
+upgrade for anyone already using RSpec 3.0, but if we did introduce
+any regressions, please let us know, and we'll get a patch release
+out with a fix ASAP.&lt;/p&gt;
+
+&lt;p&gt;RSpec continues to be a community-driven project with contributors
+from all over the world. This release includes 647 commits from 190
+pull requests from 47 different contributors.&lt;/p&gt;
+
+&lt;p&gt;Thank you to everyone who helped make this release happen!&lt;/p&gt;
+
+&lt;h2 id="notable-changes"&gt;Notable Changes&lt;/h2&gt;
+
+&lt;h3 id="core-backtrace-filtering-changes"&gt;Core: Backtrace filtering changes&lt;/h3&gt;
+
+&lt;p&gt;In RSpec 2.x and RSpec 3.0, the default backtrace filtering configuration
+excluded lines from gems from printed backraces. We &lt;a href="https://github.com/rspec/rspec-core/issues/1536#issuecomment-43521129"&gt;got some
+feedback&lt;/a&gt;
+that this was unhelpful and have removed &lt;code&gt;/gems/&lt;/code&gt; from the default
+backtrace filter patterns. In RSpec 3.1, lines from gems will be
+included backtraces, but lines from RSpec itself will continue to be
+excluded. Of course, if you want still gems to be excluded, you can easily
+add this pattern back yourself:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="c1"&gt;# spec/spec_helper.rb&lt;/span&gt;
+&lt;span class="no"&gt;RSpec&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;configure&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;backtrace_exclusion_patterns&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="sr"&gt;/gems/&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In addition, we've added a new API to make it easy to filter out one
+or more specific gems:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="c1"&gt;# spec/spec_helper.rb&lt;/span&gt;
+&lt;span class="no"&gt;RSpec&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;configure&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;filter_gems_from_backtrace&lt;/span&gt; &lt;span class="s2"&gt;"rack"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"rake"&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id="core-new---exclude-pattern-option"&gt;Core: New &lt;code&gt;--exclude-pattern&lt;/code&gt; option&lt;/h3&gt;
+
+&lt;p&gt;RSpec 3.1 has a new &lt;code&gt;--exclude-pattern&lt;/code&gt; option that is the inverse of
+&lt;code&gt;--pattern&lt;/code&gt;. This allows you to exclude particular files, so that,
+for example, you can load and run all spec files except those from
+a particular directory:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;rspec&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;pattern&lt;/span&gt; &lt;span class="s2"&gt;"spec/**/*_spec.rb"&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;exclude&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pattern&lt;/span&gt; &lt;span class="s2"&gt;"spec/acceptance/**/*_spec.rb"&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The rake task definition API supports this option now, too, so it is
+easy to define tasks that run all specs but those from one directory:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="c1"&gt;# Rakefile&lt;/span&gt;
+&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s1"&gt;'rspec/core/rake_task'&lt;/span&gt;
+
+&lt;span class="n"&gt;desc&lt;/span&gt; &lt;span class="s2"&gt;"Run all but the acceptance specs"&lt;/span&gt;
+&lt;span class="no"&gt;RSpec&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Core&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;RakeTask&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:all_but_acceptance&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;exclude_pattern&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"spec/acceptance/**/*_spec.rb"&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thanks to John Gesimondo for suggesting and
+&lt;a href="https://github.com/rspec/rspec-core/pull/1651"&gt;implementing&lt;/a&gt;
+this new feature!&lt;/p&gt;
+
+&lt;h3 id="core-can-now-be-used-standalone-without-configuration"&gt;Core: Can now be used standalone without configuration&lt;/h3&gt;
+
+&lt;p&gt;RSpec got split up into separate gems (core, expecations and mocks) in RSpec 2.0,
+which allows users to &lt;a href="/blog/2012/07/mixing-and-matching-parts-of-rspec"&gt;mix and
+match parts of RSpec&lt;/a&gt;
+with other testing libraries like Minitest. Tom Stuart pointed out that it
+wasn't as easy to use just rspec-core as it could be–specifically, in RSpec 3.0 and
+before, if you didn't explicitly configure rspec-core to not use
+rspec-expectations and rspec-mocks, it assumed they were available,
+tried to load them, and gave you an error if they were not.&lt;/p&gt;
+
+&lt;p&gt;In RSpec 3.1, we've rectified this. rspec-expectations and rspec-mocks
+will still both be used by default if available, but it they are not
+available and you haven't configured anything, rspec-core will work just
+fine.&lt;/p&gt;
+
+&lt;p&gt;Thanks to Sam Phippen for &lt;a href="https://github.com/rspec/rspec-core/pull/1615"&gt;implementating&lt;/a&gt; this improvement.&lt;/p&gt;
+
+&lt;h3 id="core-warnings-flag-no-longer-defaults-to-true-in-generated-files"&gt;Core: Warnings flag no longer defaults to true in generated files&lt;/h3&gt;
+
+&lt;p&gt;In RSpec 3.0, we put &lt;code&gt;--warnings&lt;/code&gt; in the generated &lt;code&gt;.rspec&lt;/code&gt; file. We
+did that to encourage gem authors to make their gems warning-free (as
+gems that issue warnings inhibit users from using Ruby's warning mode).
+However, the rails ecosystem has generally not strived to have warning-free
+code, and on new rails projects, this led to a &lt;em&gt;ton&lt;/em&gt; of confusing warnings.&lt;/p&gt;
+
+&lt;p&gt;In RSpec 3.1, we learned from the community feedback on this and have removed
+&lt;code&gt;--warnings&lt;/code&gt; from the generated &lt;code&gt;.rspec&lt;/code&gt; file. In non-rails projects, &lt;code&gt;rspec --init&lt;/code&gt;
+will include &lt;code&gt;config.warnings = true&lt;/code&gt; in the commented-out section of recommended
+settings in &lt;code&gt;spec_helper.rb&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thanks to Andrew Hooker for &lt;a href="https://github.com/rspec/rspec-core/pull/1572"&gt;making this change&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id="expectations-new-haveattributes-matcher"&gt;Expectations: New &lt;code&gt;have_attributes&lt;/code&gt; matcher&lt;/h3&gt;
+
+&lt;p&gt;This new matcher makes it easy to match an object based on its attributes:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="no"&gt;Person&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Struct&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:age&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;person&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Person&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Coen"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;person&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;have_attributes&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;name: &lt;/span&gt;&lt;span class="s2"&gt;"Coen"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;age: &lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It's also aliased to &lt;code&gt;an_object_having_attributes&lt;/code&gt;, which is particularly
+useful in composed matcher expressions:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;people&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="no"&gt;Person&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Coen"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="no"&gt;Person&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Daphne"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
+&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;people&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;match&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;
+  &lt;span class="n"&gt;an_object_having_attributes&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;name: &lt;/span&gt;&lt;span class="s2"&gt;"Coen"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;   &lt;span class="ss"&gt;age: &lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+  &lt;span class="n"&gt;an_object_having_attributes&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;name: &lt;/span&gt;&lt;span class="s2"&gt;"Daphne"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;age: &lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It can also be used as an argument matcher for a message expectation:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;email_gateway&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;receive&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:send_receipt&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;with&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+  &lt;span class="n"&gt;an_object_having_attributes&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;email: &lt;/span&gt;&lt;span class="s2"&gt;"foo@example.com"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thanks to Adam Farhi for
+&lt;a href="https://github.com/rspec/rspec-expectations/pull/571"&gt;implementing&lt;/a&gt;
+this new matcher.&lt;/p&gt;
+
+&lt;h3 id="expectations-block-matchers-can-now-be-used-in-compound-expressions"&gt;Expectations: Block matchers can now be used in compound expressions&lt;/h3&gt;
+
+&lt;p&gt;RSpec 3.0 gained the ability to use &lt;a href="/blog/2014/01/new-in-rspec-3-composable-matchers#compound_matcher_expressions"&gt;compound matcher
+expressions&lt;/a&gt;.
+However, it didn't work with block expectations because we had internal
+changes that needed to be made to ensure the block is only executed
+once as one would expect. We've addressed this in 3.1, which allows an
+expression like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="n"&gt;expect&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+  &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="p"&gt;}.&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;change&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="p"&gt;}.&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;and&lt;/span&gt; &lt;span class="n"&gt;change&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="p"&gt;}.&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id="expectations-new-definenegatedmatcher-api"&gt;Expectations: New &lt;code&gt;define_negated_matcher&lt;/code&gt; API&lt;/h3&gt;
+
+&lt;p&gt;This new API provides a means to define a negated version of an existing matcher:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="c1"&gt;# define a negated form of `include`...&lt;/span&gt;
+&lt;span class="no"&gt;RSpec&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Matchers&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;define_negated_matcher&lt;/span&gt; &lt;span class="ss"&gt;:exclude&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:include&lt;/span&gt;
+
+&lt;span class="c1"&gt;# ...which allows you to write:&lt;/span&gt;
+&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;odd_numbers&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;exclude&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# ...rather than:&lt;/span&gt;
+&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;odd_numbers&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;not_to&lt;/span&gt; &lt;span class="kp"&gt;include&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;On its own, this doesn't buy you much. However, it really comes in handy
+when dealing with composed or compound matcher expressions:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;adults&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Town&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Springfield"&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;adults&lt;/span&gt;
+&lt;span class="n"&gt;marge&lt;/span&gt;  &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Character&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Marge"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;bart&lt;/span&gt;   &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Character&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Bart"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;adults&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="kp"&gt;include&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;marge&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;and&lt;/span&gt; &lt;span class="n"&gt;exclude&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;bart&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thanks to Adam Farhi for helping with the
+&lt;a href="https://github.com/rspec/rspec-expectations/pull/618"&gt;implementation&lt;/a&gt;
+of this feature.&lt;/p&gt;
+
+&lt;h3 id="expectations-custom-matcher-chained-modifiers-now-included-in-generated-description"&gt;Expectations: Custom matcher chained modifiers now included in generated description&lt;/h3&gt;
+
+&lt;p&gt;The custom matcher DSL allows you to define a fluent interface using
+&lt;code&gt;chain&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="no"&gt;RSpec&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Matchers&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;define&lt;/span&gt; &lt;span class="ss"&gt;:be_smaller_than&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;max&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="n"&gt;chain&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;and_bigger_than&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;min&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+    &lt;span class="vi"&gt;@min&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;min&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+
+  &lt;span class="n"&gt;match&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;actual&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+    &lt;span class="n"&gt;actual&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;max&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;actual&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="vi"&gt;@min&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+
+&lt;span class="c1"&gt;# usage:&lt;/span&gt;
+&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;be_smaller_than&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;and_bigger_than&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In RSpec 2.x and 3.0, the chained part was not included in failure messages:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight plaintext"&gt;Failure/Error: expect(5).to be_smaller_than(10).and_bigger_than(7)
+  expected 5 to be smaller than 10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;RSpec 3.1 can include the chained part in the failure message:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight plaintext"&gt;Failure/Error: expect(5).to be_smaller_than(10).and_bigger_than(7)
+  expected 5 to be smaller than 10 and bigger than 7
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;…but only if you enable this behavior with a config option:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="no"&gt;RSpec&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;configure&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;expect_with&lt;/span&gt; &lt;span class="ss"&gt;:rspec&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;expectations&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+    &lt;span class="n"&gt;expectations&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;include_chain_clauses_in_custom_matcher_descriptions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kp"&gt;true&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This config option defaults to &lt;code&gt;false&lt;/code&gt; for backwards compatibility.
+We plan to always enable it in RSpec 4.&lt;/p&gt;
+
+&lt;p&gt;Thanks to Dan Oved for
+&lt;a href="https://github.com/rspec/rspec-expectations/pull/600"&gt;implementing&lt;/a&gt;
+this improvement!&lt;/p&gt;
+
+&lt;h3 id="mocks-new-spy-methods"&gt;Mocks: New &lt;code&gt;*_spy&lt;/code&gt; methods&lt;/h3&gt;
+
+&lt;p&gt;RSpec 2.14 added support for using test doubles as spies, which allow
+you to set an expectation that a message was received after the fact:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;spy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;double&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:foo&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="kp"&gt;nil&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;# do something with spy&lt;/span&gt;
+&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;spy&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;have_received&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:foo&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that we stubbed &lt;code&gt;foo&lt;/code&gt; here. This is necessary because doubles are
+strict by default – meaning that they will raise an error when they
+receive an unexpected message. Unfortunately, this forces a bit of
+duplication on you as you have to declare the method twice (stubbing it
+once before and expecting it was received after).&lt;/p&gt;
+
+&lt;p&gt;You can get around this by using &lt;code&gt;as_null_object&lt;/code&gt; which makes a double
+"loose" rather than strict, allowing it to receive any message:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;spy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;double&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;as_null_object&lt;/span&gt;
+&lt;span class="c1"&gt;# do something with spy&lt;/span&gt;
+&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;spy&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;have_received&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:foo&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This pattern is useful enough that in RSpec 3.1, we've added new methods
+to declare spies:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;spy&lt;/span&gt;&lt;span class="p"&gt;(.&lt;/span&gt;&lt;span class="nf"&gt;.&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;          &lt;span class="c1"&gt;# equivalent to double(...).as_null_object&lt;/span&gt;
+&lt;span class="n"&gt;instance_spy&lt;/span&gt;&lt;span class="p"&gt;(.&lt;/span&gt;&lt;span class="nf"&gt;.&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# equivalent to instance_double(...).as_null_object&lt;/span&gt;
+&lt;span class="n"&gt;class_spy&lt;/span&gt;&lt;span class="p"&gt;(.&lt;/span&gt;&lt;span class="nf"&gt;.&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;    &lt;span class="c1"&gt;# equivalent to class_double(...).as_null_object&lt;/span&gt;
+&lt;span class="n"&gt;object_spy&lt;/span&gt;&lt;span class="p"&gt;(.&lt;/span&gt;&lt;span class="nf"&gt;.&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="c1"&gt;# equivalent to object_double(...).as_null_object&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thanks to Justin Searls for &lt;a href="https://github.com/rspec/rspec-mocks/issues/636"&gt;bringing
+up this issue&lt;/a&gt; and
+Sam Phippen for
+&lt;a href="https://github.com/rspec/rspec-mocks/pull/671"&gt;implementing&lt;/a&gt; the new
+methods.&lt;/p&gt;
+
+&lt;h3 id="mocks-new-andwraporiginal-api"&gt;Mocks: New &lt;code&gt;and_wrap_original&lt;/code&gt; API&lt;/h3&gt;
+
+&lt;p&gt;This new API allows you to easily decorate a particular existing method on a
+particular object just for the duration of the current example. The
+original method is yielded to your block as the first argument (before
+the args of the actual method call).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;allow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;api_client&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;receive&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:fetch_users&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;and_wrap_original&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;original_method&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="n"&gt;original_method&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;call&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;first&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# truncate the response to the first 10 users&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thanks to Jon Rowe for
+&lt;a href="https://github.com/rspec/rspec-mocks/pull/762"&gt;implementing&lt;/a&gt; this
+feature.&lt;/p&gt;
+
+&lt;h3 id="rails-rails-42-support"&gt;Rails: Rails 4.2 support&lt;/h3&gt;
+
+&lt;p&gt;rspec-rails 3.1 will officially support Rails 4.2. Aaron Kromer has been
+doing a great job getting RSpec 3.1 ready for Rails 4.2. This includes
+a generator &lt;a href="https://github.com/rspec/rspec-rails/pull/1155"&gt;provided by Abdelkader
+Boudih&lt;/a&gt; for ActiveJob.&lt;/p&gt;
+
+&lt;h3 id="rails-generated-railshelperrb-no-longer-auto-loads-specsupport-files-by-default"&gt;Rails: Generated &lt;code&gt;rails_helper.rb&lt;/code&gt; no longer auto-loads &lt;code&gt;spec/support&lt;/code&gt; files by default&lt;/h3&gt;
+
+&lt;p&gt;Aaron has also &lt;a href="https://github.com/rspec/rspec-rails/pull/1137"&gt;made a small change&lt;/a&gt;
+to the generator for &lt;code&gt;rails_helper.rb&lt;/code&gt;.  Previously, it contained some code that
+would automatically load all files under &lt;code&gt;spec/support&lt;/code&gt;. That code is still
+there but is now commented out.  We've found that it helps prevent load time
+bloat to manually require the support files that are needed, rather than
+always loading all of them.&lt;/p&gt;
+
+&lt;p&gt;Of course, if you prefer the convenience of the old way, that's a reasonable
+tradeoff, and you can easily uncomment this bit of code.&lt;/p&gt;
+
+&lt;h2 id="stats"&gt;Stats&lt;/h2&gt;
+
+&lt;h3 id="rspec-core"&gt;rspec-core:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Total Commits&lt;/strong&gt;: 176&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Merged pull requests&lt;/strong&gt;: 50&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;20 contributors&lt;/strong&gt;: Aaron Kromer, Alex Tan, Andrew Hooker, Christian Treppo, Colin Jones, Daniela Wellisz, Dominic Muller, Evgeny Zislis, Gary Fleshman, Jimmy Cuadra, John Gesimondo, Jon Rowe, Mark Lorenz, Max Lincoln, Myron Marston, Paul Cortens, Prem Sichanugrist, Sam Phippen, Su Zhang (張甦), tomykaira&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="rspec-expectations"&gt;rspec-expectations:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Total Commits&lt;/strong&gt;: 149&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Merged pull requests&lt;/strong&gt;: 40&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;14 contributors&lt;/strong&gt;: Aaron Kromer, Abdelkader Boudih, Adam Farhi, Alex Sunderland, Chris Griego, Dennis Taylor, Hao Su, Jon Rowe, Myron Marston, Pritesh Jain, Sam Phippen, Xavier Shay, fimmtiu, oveddan&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="rspec-mocks"&gt;rspec-mocks:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Total Commits&lt;/strong&gt;: 118&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Merged pull requests&lt;/strong&gt;: 39&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;13 contributors&lt;/strong&gt;: Aaron Kromer, Chris Griego, Dennis Taylor, Eugene Kenny, Igor Kapkov, Jimmy Cuadra, Jon Rowe, Karthik T, Myron Marston, Oliver Martell Núñez, Sam Phippen, Thomas Brand, Xavier Shay&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="rspec-rails"&gt;rspec-rails:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Total Commits&lt;/strong&gt;: 137&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Merged pull requests&lt;/strong&gt;: 38&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;16 contributors&lt;/strong&gt;: Aaron Kromer, Abdelkader Boudih, Alex Rothenberg, Andre Arko &amp;amp; Doc Ritezel, André Arko, Bradley Schaefer, Diego Plentz, Jon Rowe, Josh Kalderimis, Juan González, Kosmas Chatzimichalis, Michael E. Gruen, Myron Marston, Sam Phippen, Thomas Kriechbaumer, joker1007&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="rspec-support"&gt;rspec-support:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Total Commits&lt;/strong&gt;: 67&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Merged pull requests&lt;/strong&gt;: 23&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;8 contributors&lt;/strong&gt;: Aaron Kromer, Ben Langfeld, Jimmy Cuadra, Jon Rowe, Myron Marston, Pritesh Jain, Sam Phippen, Xavier Shay&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="docs"&gt;Docs&lt;/h2&gt;
+
+&lt;h3 id="api-docs"&gt;API Docs&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://rubydoc.info/gems/rspec-core"&gt;http://rubydoc.info/gems/rspec-core&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://rubydoc.info/gems/rspec-expectations"&gt;http://rubydoc.info/gems/rspec-expectations&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://rubydoc.info/gems/rspec-mocks"&gt;http://rubydoc.info/gems/rspec-mocks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://rubydoc.info/gems/rspec-rails"&gt;http://rubydoc.info/gems/rspec-rails&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="cucumber-features"&gt;Cucumber Features&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://relishapp.com/rspec/rspec-core"&gt;http://relishapp.com/rspec/rspec-core&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://relishapp.com/rspec/rspec-expectations"&gt;http://relishapp.com/rspec/rspec-expectations&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://relishapp.com/rspec/rspec-mocks"&gt;http://relishapp.com/rspec/rspec-mocks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://relishapp.com/rspec/rspec-rails"&gt;http://relishapp.com/rspec/rspec-rails&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="release-notes"&gt;Release Notes&lt;/h2&gt;
+
+&lt;h3 id="rspec-core-310"&gt;rspec-core-3.1.0&lt;/h3&gt;
+&lt;p&gt;&lt;a href="http://github.com/rspec/rspec-core/compare/v3.0.4...v3.1.0"&gt;Full Changelog&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Enhancements:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Update files generated by &lt;code&gt;rspec --init&lt;/code&gt; so that warnings are enabled
+in commented out section of &lt;code&gt;spec_helper&lt;/code&gt; rather than &lt;code&gt;.rspec&lt;/code&gt; so users
+have to consciously opt-in to the setting. (Andrew Hooker, #1572)&lt;/li&gt;
+  &lt;li&gt;Update &lt;code&gt;spec_helper&lt;/code&gt; generated by &lt;code&gt;rspec --init&lt;/code&gt; so that it sets the new
+rspec-expectations &lt;code&gt;include_chain_clauses_in_custom_matcher_descriptions&lt;/code&gt;
+config option (which will be on by default in RSpec 4) and also sets the
+rspec-mocks &lt;code&gt;verify_partial_doubles&lt;/code&gt; option (which will also default
+to on in RSpec 4). (Myron Marston, #1647)&lt;/li&gt;
+  &lt;li&gt;Provide an &lt;code&gt;inspect&lt;/code&gt; output for example procsy objects (used in around
+hooks) that doesn't make them look like procs. (Jon Rowe, #1620)&lt;/li&gt;
+  &lt;li&gt;Remove a few unneeded &lt;code&gt;require&lt;/code&gt; statements from
+&lt;code&gt;rspec/core/rake_task.rb&lt;/code&gt;, making it even more lighterweight.
+(Myron Marston, #1640)&lt;/li&gt;
+  &lt;li&gt;Allow rspec-core to be used when neither rspec-mocks or
+rspec-expectations are installed, without requiring any
+user configuration. (Sam Phippen, Myron Marston, #1615)&lt;/li&gt;
+  &lt;li&gt;Don't filter out gems from backtraces by default. (The RSpec
+gems will still be filtered). User feedback has indicated
+that including gems in default backtraces will be useful.
+(Myron Marston, #1641)&lt;/li&gt;
+  &lt;li&gt;Add new &lt;code&gt;config.filter_gems_from_backtrace "rack", "rake"&lt;/code&gt; API
+to easily filter the named gems from backtraces. (Myron Marston, #1682)&lt;/li&gt;
+  &lt;li&gt;Fix default backtrace filters so that the RSpec binary is
+excluded when installing RSpec as a bundler &lt;code&gt;:git&lt;/code&gt; dependency.
+(Myron Marston, #1648)&lt;/li&gt;
+  &lt;li&gt;Simplify command generated by the rake task so that it no longer
+includes unnecessary &lt;code&gt;-S&lt;/code&gt;. (Myron Marston, #1559)&lt;/li&gt;
+  &lt;li&gt;Add &lt;code&gt;--exclude-pattern&lt;/code&gt; CLI option, &lt;code&gt;config.exclude_pattern =&lt;/code&gt; config
+option and &lt;code&gt;task.exclude_pattern =&lt;/code&gt; rake task config option. Matching
+files will be excluded. (John Gesimondo, Myron Marston, #1651, #1671)&lt;/li&gt;
+  &lt;li&gt;When an around hook fails to execute the example, mark it as
+pending (rather than passing) so the user is made aware of the
+fact that the example did not actually run. (Myron Marston, #1660)&lt;/li&gt;
+  &lt;li&gt;Remove dependency on &lt;code&gt;FileUtils&lt;/code&gt; from the standard library so that users do
+not get false positives where their code relies on it but they are not
+requiring it. (Sam Phippen, #1565)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Bug Fixes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fix rake task &lt;code&gt;t.pattern =&lt;/code&gt; option so that it does not run all specs
+when it matches no files, by passing along a &lt;code&gt;--pattern&lt;/code&gt; option to
+the &lt;code&gt;rspec&lt;/code&gt; command, rather than resolving the file list and passing
+along the files individually. (Evgeny Zislis, #1653)&lt;/li&gt;
+  &lt;li&gt;Fix rake task default pattern so that it follows symlinks properly.
+(Myron Marston, #1672)&lt;/li&gt;
+  &lt;li&gt;Fix default pattern used with &lt;code&gt;rspec&lt;/code&gt; command so that it follows
+symlinks properly. (Myron Marston, #1672)&lt;/li&gt;
+  &lt;li&gt;Change how we assign constant names to example group classes so that
+it avoids a problem with &lt;code&gt;describe "Core"&lt;/code&gt;. (Daniela Wellisz, #1679)&lt;/li&gt;
+  &lt;li&gt;Handle rendering exceptions that have a different encoding than that
+of their original source file. (Jon Rowe, #1681)&lt;/li&gt;
+  &lt;li&gt;Allow access to message_lines without colour for failed examples even
+when they're part of a shared example group. (tomykaira, #1689)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="rspec-expectations-310"&gt;rspec-expectations-3.1.0&lt;/h3&gt;
+&lt;p&gt;&lt;a href="http://github.com/rspec/rspec-expectations/compare/v3.0.4...v3.1.0"&gt;Full Changelog&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Enhancements:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add &lt;code&gt;have_attributes&lt;/code&gt; matcher, that passes if actual's attribute
+values match the expected attributes hash:
+&lt;code&gt;Person = Struct.new(:name, :age)&lt;/code&gt;
+&lt;code&gt;person = Person.new("Bob", 32)&lt;/code&gt;
+&lt;code&gt;expect(person).to have_attributes(:name =&amp;gt; "Bob", :age =&amp;gt; 32)&lt;/code&gt;.
+(Adam Farhi, #571)&lt;/li&gt;
+  &lt;li&gt;Extended compound matcher support to block matchers, for cases like:
+&lt;code&gt;expect { ... }.to change { x }.to(3).and change { y }.to(4)&lt;/code&gt;. (Myron
+Marston, #567)&lt;/li&gt;
+  &lt;li&gt;Include chained methods in custom matcher description and failure message
+when new &lt;code&gt;include_chain_clauses_in_custom_matcher_descriptions&lt;/code&gt; config
+option is enabled. (Dan Oved, #600)&lt;/li&gt;
+  &lt;li&gt;Add &lt;code&gt;thrice&lt;/code&gt; modifier to &lt;code&gt;yield_control&lt;/code&gt; matcher as a synonym for
+&lt;code&gt;exactly(3).times&lt;/code&gt;. (Dennis Taylor, #615)&lt;/li&gt;
+  &lt;li&gt;Add &lt;code&gt;RSpec::Matchers.define_negated_matcher&lt;/code&gt;, which defines a negated
+version of the named matcher. (Adam Farhi, Myron Marston, #618)&lt;/li&gt;
+  &lt;li&gt;Document and support negation of &lt;code&gt;contain_exactly&lt;/code&gt;/&lt;code&gt;match_array&lt;/code&gt;.
+(Jon Rowe, #626).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Bug Fixes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Rename private &lt;code&gt;LegacyMacherAdapter&lt;/code&gt; constant to &lt;code&gt;LegacyMatcherAdapter&lt;/code&gt;
+to fix typo. (Abdelkader Boudih, #563)&lt;/li&gt;
+  &lt;li&gt;Fix &lt;code&gt;all&lt;/code&gt; matcher so that it fails properly (rather than raising a
+&lt;code&gt;NoMethodError&lt;/code&gt;) when matched against a non-enumerable. (Hao Su, #622)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="rspec-mocks-310"&gt;rspec-mocks-3.1.0&lt;/h3&gt;
+&lt;p&gt;&lt;a href="http://github.com/rspec/rspec-mocks/compare/v3.0.4...v3.1.0"&gt;Full Changelog&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Enhancements:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add spying methods (&lt;code&gt;spy&lt;/code&gt;, &lt;code&gt;ìnstance_spy&lt;/code&gt;, &lt;code&gt;class_spy&lt;/code&gt; and &lt;code&gt;object_spy&lt;/code&gt;)
+which create doubles as null objects for use with spying in testing. (Sam
+Phippen, #671)&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;have_received&lt;/code&gt; matcher will raise "does not implement" errors correctly when
+used with verifying doubles and partial doubles. (Xavier Shay, #722)&lt;/li&gt;
+  &lt;li&gt;Allow matchers to be used in place of keyword arguments in &lt;code&gt;with&lt;/code&gt;
+expectations. (Xavier Shay, #726)&lt;/li&gt;
+  &lt;li&gt;Add &lt;code&gt;thrice&lt;/code&gt; modifier to message expectation interface as a synonym
+for &lt;code&gt;exactly(3).times&lt;/code&gt;. (Dennis Taylor, #753)&lt;/li&gt;
+  &lt;li&gt;Add more &lt;code&gt;thrice&lt;/code&gt; synonyms e.g. &lt;code&gt;.at_least(:thrice)&lt;/code&gt;, &lt;code&gt;.at_most(:thrice)&lt;/code&gt;,
+&lt;code&gt;receive(...).thrice&lt;/code&gt; and &lt;code&gt;have_received(...).thrice&lt;/code&gt;. (Jon Rowe, #754)&lt;/li&gt;
+  &lt;li&gt;Add &lt;code&gt;and_wrap_original&lt;/code&gt; modifier for partial doubles to mutate the
+response from a method. (Jon Rowe, #762)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Bugfixes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Remove &lt;code&gt;any_number_of_times&lt;/code&gt; from &lt;code&gt;any_instance&lt;/code&gt; recorders that were
+erroneously causing mention of the method in documentation. (Jon Rowe, #760)&lt;/li&gt;
+  &lt;li&gt;Prevent included modules being detected as prepended modules on Ruby 2.0.
+(Eugene Kenny, #771)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="rspec-rails-310"&gt;rspec-rails-3.1.0&lt;/h3&gt;
+&lt;p&gt;&lt;a href="http://github.com/rspec/rspec-rails/compare/v3.0.2...v3.1.0"&gt;Full Changelog&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Enhancements:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Switch to using the &lt;code&gt;have_http_status&lt;/code&gt; matcher in spec generators. (Aaron Kromer, #1086)&lt;/li&gt;
+  &lt;li&gt;Update &lt;code&gt;rails_helper&lt;/code&gt; generator to allow users to opt-in to auto-loading
+&lt;code&gt;spec/support&lt;/code&gt; files instead of forcing it upon them. (Aaron Kromer, #1137)&lt;/li&gt;
+  &lt;li&gt;Include generator for &lt;code&gt;ActiveJob&lt;/code&gt;. (Abdelkader Boudih, #1155)&lt;/li&gt;
+  &lt;li&gt;Improve support for non-ActiveRecord apps by not loading ActiveRecord related
+settings in the generated &lt;code&gt;rails_helper&lt;/code&gt;. (Aaron Kromer, #1150)&lt;/li&gt;
+  &lt;li&gt;Remove Ruby warnings as a suggested configuration. (Aaron Kromer, #1163)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Bug Fixes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fix controller route lookup for Rails 4.2. (Tomohiro Hashidate, #1142)&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>RSpec Team Changes</title>
+    <link rel="alternate" href="http://rspec.info/blog/2014/06/rspec-team-changes/"/>
+    <id>http://rspec.info/blog/2014/06/rspec-team-changes/</id>
+    <published>2014-06-13T10:00:00+10:00</published>
+    <updated>2015-01-29T21:49:36+11:00</updated>
+    <author>
+      <name>Myron Marston</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href="http://www.andylindeman.com/"&gt;Andy Lindeman&lt;/a&gt;, who has been working on RSpec
+with me for a couple years, has decided to retire from the RSpec core team.
+In his current job at GitHub, he's using Ruby and Rails much less than
+he used to. It has been really great to have the chance to work with Andy
+over the last few years. I can't thank him enough. His work on
+rspec-rails in particular (since he's been lead maintainer) has been
+awesome. We wish him well in his future endeavors.&lt;/p&gt;
+
+&lt;p&gt;Meanwhile, &lt;a href="http://aaronkromer.com/"&gt;Aaron Kromer&lt;/a&gt;, who joined the team
+a few months back, has volunteered to take responsibility as lead
+rspec-rails maintainer. Aaron's already been doing a wonderful job.&lt;/p&gt;
+
+&lt;p&gt;Lastly, we have one more new team member – &lt;a href="http://yujinakayama.me/"&gt;Yuji Nakayama&lt;/a&gt;.
+If you've upgraded a code base from RSpec 2 to RSpec 3 you've probably
+benefited from Yuji's great work on &lt;a href="http://yujinakayama.me/transpec/"&gt;transpec&lt;/a&gt;.
+We're excited to have Yuji on the team.&lt;/p&gt;
+
+&lt;p&gt;Please join me in thanking Andy, and congratulating Aaron and Yuji!&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>RSpec 2.99.0 and 3.0.0 have been released!</title>
+    <link rel="alternate" href="http://rspec.info/blog/2014/06/rspec-2-99-0-and-3-0-0-have-been-released/"/>
+    <id>http://rspec.info/blog/2014/06/rspec-2-99-0-and-3-0-0-have-been-released/</id>
+    <published>2014-06-02T10:00:00+10:00</published>
+    <updated>2015-01-29T21:49:36+11:00</updated>
+    <author>
+      <name>Myron Marston</name>
+    </author>
+    <content type="html">&lt;p&gt;RSpec 2.99.0 and 3.0.0 have been released! RSpec 3 has tons of &lt;a href="/blog/2014/05/notable-changes-in-rspec-3"&gt;great new
+features&lt;/a&gt;. RSpec 2.99 is
+part of the &lt;a href="https://relishapp.com/rspec/docs/upgrade"&gt;recommended upgrade path&lt;/a&gt;
+for projects currently on RSpec 2.x.&lt;/p&gt;
+
+&lt;p&gt;RSpec 3 is the work of many, many people, and it never would have happened without
+the community contributing to it. Special thanks to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The RSpec core team: Aaron Kromer, Andy Lindeman, Bradley Schaefer, Jon Rowe, Sam Phippen and Xavier Shay.
+It's fantastic to work with all of you.&lt;/li&gt;
+  &lt;li&gt;Yuji Nakayama, for creating &lt;a href="http://yujinakayama.me/transpec/"&gt;transpec&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;The folks who stepped forward to maintain the extracted gems:
+    &lt;ul&gt;
+      &lt;li&gt;Peter Alfvin – &lt;a href="https://github.com/rspec/rspec-its"&gt;rspec-its&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Hugo Baraúna – &lt;a href="https://github.com/rspec/rspec-collection_matchers"&gt;rspec-collection_matchers&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Thomas Holmes – &lt;a href="https://github.com/rspec/rspec-activemodel-mocks"&gt;rspec-activemodel-mocks&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Abdelkader Boudih – &lt;a href="https://github.com/rspec/rspec-autotest"&gt;rspec-autotest&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Everyone who contributed to RSpec 3. Their names are all listed below.&lt;/li&gt;
+  &lt;li&gt;Everyone who tried out the betas and the release candidate. Getting bug reports early,
+before 3.0 final was out, really helped us make it a solid release, so thank you.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="the-numbers"&gt;The numbers&lt;/h2&gt;
+
+&lt;p&gt;I thought it'd be fun to extract some stats from the git logs to get an idea of how much work went into RSpec 3.
+I put together a &lt;a href="https://github.com/rspec/rspec-dev/pull/71"&gt;rake task&lt;/a&gt; to do this, and the raw numbers surprised me:&lt;/p&gt;
+
+&lt;h3 id="across-all-repos"&gt;Across all repos:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Total Commits&lt;/strong&gt;: 4069&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Merged pull requests&lt;/strong&gt;: 882&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;122 contributors&lt;/strong&gt;: Aaron Blew, Aaron Kromer, AbuSabah, Adam Farhi, Adarsh Pandit, Adrian CB, Adrian Gonzalez, Alex Peattie, Alex Rothenberg, Alex Yaremyuk, Alexander Clark, Alexey Fedorov, Alexey Pisarenko, Andy Henson, Andy Lindeman, Andy Waite, Arthur Neves, Arthur Nogueira Neves, Ashish Dixit, Ben Hamill, Ben Hoskings, Ben Moss, Ben Orenstein, Billy, Bradley Schaefer, Brandon Turner, Brian Fontenot, Cezar Halmagean, Christof, Claudio B., Damian Galarza, Daniel Fone, Daniel Murphy, Darryl Pogue, David Chelimsky, David Dollar, David Long, Eloy Espinaco, Erik Michaels-Ober, Federico Ravasio, Florian Thomas, Fujimura Daisuke, Giovanni Cappellotto, Giuseppe Capizzi, Grant Hollingworth, Guilherme Carvalho, Hendy Tanata, Hugo Baraúna, Ivo Wever, Jakub Racek, Jared Norman, Jay Hayes, Jeff Wallace, Johannes / universa1, John Feminella, John Firebaugh, John Voloski, Jon Rowe, Jonathan del Strother, Josef Šimánek, Justin Coyne, Karthik Kastury, Katsuhiko Nishimra, Keiji, Kelly Stannard, Kenrick Chien, Lucas Mazza, Marc-Andre Lafortune, MasterLambaster, Matijs van Zuijlen, Matt Sanders, Matthew M. Boedicker, Mauricio Linhares, Michael Gee, Michael de Silva, Michi Huber, Myron Marston, Nerian, Nick DeLuca, Olle Jonsson, Oren Dobzinski, Paavo Leinonen, Parker Selbert, Paul Annesley, Pedro Gimenez, Pete Higgins, Peter Alfvin, Peter Inglesby, Postmodern, Prathamesh Sonpatki, Puneet Goyal, René Föhring, Reyes Yang, Rodrigo Rosenfeld Rosas, Ryo Nakamura, Salimane Adjao Moustapha, Sam Phippen, Sergey Pchelincev, Stephen Best, Steve Richert, Stuart Hicks, Tay Ray Chuan, Thijs Wouters, Thomas Drake-Brockman, Thomas Holmes, Thomas Stratmann, Tim Cowlishaw, Tim Watson, Tom Stuart, Tom Ward, Travis Herrick, Vinicius Horewicz, Vipul A M, Xavier Shay, Yoshimi, Yuji Nakayama, lucapette, maxlinc, modocache, sanemat, thepoho, vanstee&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="rspec"&gt;rspec:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Total Commits&lt;/strong&gt;: 23&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Merged pull requests&lt;/strong&gt;: 3&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;5 contributors&lt;/strong&gt;: Aaron Kromer, Andy Lindeman, Jon Rowe, Josef Šimánek, Myron Marston&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="rspec-core"&gt;rspec-core:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Total Commits&lt;/strong&gt;: 1589&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Merged pull requests&lt;/strong&gt;: 345&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;47 contributors&lt;/strong&gt;: Aaron Kromer, Adam Farhi, Adrian CB, Alex Peattie, Alexander Clark, Alexey Fedorov, Andy Lindeman, Arthur Neves, Ashish Dixit, Ben Hoskings, Ben Moss, Bradley Schaefer, David Chelimsky, David Dollar, Federico Ravasio, Giuseppe Capizzi, Jay Hayes, John Feminella, Jon Rowe, Karthik Kastury, Keiji, Kelly Stannard, MasterLambaster, Matijs van Zuijlen, Matthew M. Boedicker, Michael de Silva, Michi Huber, Myron Marston, Nerian, Parker Selbert, Pete Higgins, Peter Alfvin, Postmodern, René Föhring, Ryo Nakamura, Sam Phippen, Sergey Pchelincev, Steve Richert, Tay Ray Chuan, Thomas Stratmann, Tom Stuart, Travis Herrick, Vipul A M, Xavier Shay, Yoshimi, Yuji Nakayama, thepoho&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="rspec-expectations"&gt;rspec-expectations:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Total Commits&lt;/strong&gt;: 924&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Merged pull requests&lt;/strong&gt;: 191&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;41 contributors&lt;/strong&gt;: Aaron Kromer, Adam Farhi, Adrian Gonzalez, Alexey Pisarenko, Andy Henson, Andy Lindeman, Ben Moss, Ben Orenstein, Bradley Schaefer, Brandon Turner, Claudio B., Damian Galarza, Daniel Fone, Daniel Murphy, David Chelimsky, Eloy Espinaco, Erik Michaels-Ober, Federico Ravasio, Hendy Tanata, Hugo Baraúna, Ivo Wever, Jared Norman, Jeff Wallace, John Voloski, Jon Rowe, Katsuhiko Nishimra, Kenrick Chien, Myron Marston, Nerian, Pedro Gimenez, Pete Higgins, Prathamesh Sonpatki, René Föhring, Reyes Yang, Sam Phippen, Thijs Wouters, Thomas Holmes, Xavier Shay, Yuji Nakayama, lucapette, modocache&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="rspec-mocks"&gt;rspec-mocks:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Total Commits&lt;/strong&gt;: 1036&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Merged pull requests&lt;/strong&gt;: 249&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;36 contributors&lt;/strong&gt;: Aaron Kromer, Adarsh Pandit, Andy Lindeman, Arthur Nogueira Neves, Ashish Dixit, Ben Moss, Bradley Schaefer, Cezar Halmagean, David Chelimsky, Federico Ravasio, Grant Hollingworth, Guilherme Carvalho, Jon Rowe, Jonathan del Strother, Justin Coyne, Marc-Andre Lafortune, Mauricio Linhares, Michael Gee, Michi Huber, Myron Marston, Nick DeLuca, Oren Dobzinski, Paul Annesley, Pete Higgins, René Föhring, Sam Phippen, Stephen Best, Stuart Hicks, Thomas Holmes, Tim Cowlishaw, Tom Ward, Vinicius Horewicz, Xavier Shay, Yuji Nakayama, maxlinc, sanemat&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="rspec-rails"&gt;rspec-rails:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Total Commits&lt;/strong&gt;: 497&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Merged pull requests&lt;/strong&gt;: 94&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;39 contributors&lt;/strong&gt;: Aaron Blew, Aaron Kromer, AbuSabah, Alex Rothenberg, Alex Yaremyuk, Andy Lindeman, Andy Waite, Ben Hamill, Billy, Bradley Schaefer, Brian Fontenot, Christof, Darryl Pogue, David Long, Florian Thomas, Fujimura Daisuke, Giovanni Cappellotto, Jakub Racek, Johannes / universa1, John Firebaugh, John Voloski, Jon Rowe, Lucas Mazza, Matt Sanders, Myron Marston, Olle Jonsson, Paavo Leinonen, Peter Inglesby, Puneet Goyal, René Föhring, Rodrigo Rosenfeld Rosas, Salimane Adjao Moustapha, Sam Phippen, Thomas Drake-Brockman, Thomas Holmes, Tim Watson, Xavier Shay, Yuji Nakayama, vanstee&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="release-notes"&gt;Release Notes&lt;/h2&gt;
+
+&lt;p&gt;These are just the changelogs for what's changed since RC1. The full changelogs are available on github:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-core/blob/master/Changelog.md"&gt;rspec-core&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-expectations/blob/master/Changelog.md"&gt;rspec-expectations&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-mocks/blob/master/Changelog.md"&gt;rspec-mocks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-rails/blob/master/Changelog.md"&gt;rspec-rails&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="rspec-core-2990"&gt;rspec-core 2.99.0&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="http://github.com/rspec/rspec-core/compare/v2.99.0.rc1...v2.99.0"&gt;Full Changelog&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Bug Fixes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fix &lt;code&gt;BaseTextFormatter&lt;/code&gt; so that it does not re-close a closed output
+stream. (Myron Marston)&lt;/li&gt;
+  &lt;li&gt;Use &lt;code&gt;RSpec::Configuration#backtrace_exclusion_patterns&lt;/code&gt; rather than the
+deprecated &lt;code&gt;RSpec::Configuration#backtrace_clean_patterns&lt;/code&gt; when mocking
+with rr. (David Dollar)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="rspec-core-300"&gt;rspec-core 3.0.0&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="http://github.com/rspec/rspec-core/compare/v3.0.0.rc1...v3.0.0"&gt;Full Changelog&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Bug Fixes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fix &lt;code&gt;BaseTextFormatter&lt;/code&gt; so that it does not re-close a closed output
+stream. (Myron Marston)&lt;/li&gt;
+  &lt;li&gt;Fix regression in metadata that caused the metadata hash of a top-level
+example group to have a &lt;code&gt;:parent_example_group&lt;/code&gt; key even though it has
+no parent example group. (Myron Marston)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Enhancements:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Alter the default &lt;code&gt;spec_helper.rb&lt;/code&gt; to no longer recommend
+&lt;code&gt;config.full_backtrace = true&lt;/code&gt; see #1536 for discussion. (Jon Rowe)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="rspec-expectations-2990"&gt;rspec-expectations 2.99.0&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="http://github.com/rspec/rspec-expectations/compare/v2.99.0.rc1...v2.99.0"&gt;Full Changelog&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Enhancements:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Special case deprecation message for &lt;code&gt;errors_on&lt;/code&gt; with &lt;code&gt;rspec-rails&lt;/code&gt; to be more useful.
+(Aaron Kromer)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="rspec-expectations-300"&gt;rspec-expectations 3.0.0&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="http://github.com/rspec/rspec-expectations/compare/v3.0.0.rc1...v3.0.0"&gt;Full Changelog&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;No code changes. Just taking it out of pre-release.&lt;/p&gt;
+
+&lt;h3 id="rspec-mocks-2990"&gt;rspec-mocks 2.99.0&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="http://github.com/rspec/rspec-mocks/compare/v2.99.0.rc1...v2.99.0"&gt;Full Changelog&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;No changes. Just taking it out of pre-release.&lt;/p&gt;
+
+&lt;h3 id="rspec-mocks-300"&gt;rspec-mocks 3.0.0&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="http://github.com/rspec/rspec-mocks/compare/v3.0.0.rc1...v3.0.0"&gt;Full Changelog&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Bug Fixes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fix module prepend detection to work properly on ruby 2.0 for a case
+where a module is extended onto itself. (Myron Marston)&lt;/li&gt;
+  &lt;li&gt;Fix &lt;code&gt;transfer_nested_constants&lt;/code&gt; option so that transferred constants
+get properly reset at the end of the example. (Myron Marston)&lt;/li&gt;
+  &lt;li&gt;Fix &lt;code&gt;config.transfer_nested_constants = true&lt;/code&gt; so that you don't
+erroneously get errors when stubbing a constant that is not a module
+or a class. (Myron Marston)&lt;/li&gt;
+  &lt;li&gt;Fix regression that caused &lt;code&gt;double(:class =&amp;gt; SomeClass)&lt;/code&gt; to later
+trigger infinite recursion. (Myron Marston)&lt;/li&gt;
+  &lt;li&gt;Fix bug in &lt;code&gt;have_received(...).with(...).ordered&lt;/code&gt; where it was not
+taking the args into account when checking the order. (Myron Marston)&lt;/li&gt;
+  &lt;li&gt;Fix bug in &lt;code&gt;have_received(...).ordered&lt;/code&gt; where it was wrongly
+considering stubs when checking the order. (Myron Marston)&lt;/li&gt;
+  &lt;li&gt;Message expectation matchers now show descriptions from argument
+matchers when their expectations aren't met. (Jon Rowe)&lt;/li&gt;
+  &lt;li&gt;Display warning when encountering &lt;code&gt;TypeError&lt;/code&gt; during instance method
+staging on 2.0.0-p195, suffers from https://bugs.ruby-lang.org/issues/8686
+too. (Cezar Halmagean).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="rspec-rails-2990"&gt;rspec-rails 2.99.0&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="http://github.com/rspec/rspec-rails/compare/v2.99.0.rc1...v2.99.0"&gt;Full Changelog&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;No changes. Just taking it out of pre-release.&lt;/p&gt;
+
+&lt;h3 id="rspec-rails-300"&gt;rspec-rails 3.0.0&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="http://github.com/rspec/rspec-rails/compare/v3.0.0.rc1...v3.0.0"&gt;Full Changelog&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Enhancements:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Separate RSpec configuration in generated &lt;code&gt;spec_helper&lt;/code&gt; from Rails setup
+and associated configuration options. Moving Rails specific settings and
+options to &lt;code&gt;rails_helper&lt;/code&gt;. (Aaron Kromer)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Bug Fixes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fix an issue with fixture support when &lt;code&gt;ActiveRecord&lt;/code&gt; isn't loaded. (Jon Rowe)&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>Notable Changes in RSpec 3</title>
+    <link rel="alternate" href="http://rspec.info/blog/2014/05/notable-changes-in-rspec-3/"/>
+    <id>http://rspec.info/blog/2014/05/notable-changes-in-rspec-3/</id>
+    <published>2014-05-21T10:00:00+10:00</published>
+    <updated>2015-01-29T21:49:36+11:00</updated>
+    <author>
+      <name>Myron Marston</name>
+    </author>
+    <content type="html">&lt;p&gt;Update: there's a &lt;a href="http://nilp.hatenablog.com/entry/2014/05/28/003335"&gt;Japanese
+translation&lt;/a&gt; of this
+available now.&lt;/p&gt;
+
+&lt;p&gt;RSpec 3.0.0 RC1 was &lt;a href="/blog/2014/05/rspec-2-99-and-3-0-rc-1-have-been-released"&gt;released a couple days
+ago&lt;/a&gt;,
+and 3.0.0 final is just around the corner.  We've been using the betas for the
+last 6 months and we're excited to share them with you. Here's whats new:&lt;/p&gt;
+
+&lt;h2 id="across-all-gems"&gt;Across all gems&lt;/h2&gt;
+
+&lt;h3 id="removed-support-for-ruby-186-and-191"&gt;Removed support for Ruby 1.8.6 and 1.9.1&lt;/h3&gt;
+
+&lt;p&gt;These versions of Ruby were end-of-lifed long ago and
+RSpec 3 does not support them.&lt;/p&gt;
+
+&lt;h3 id="improved-ruby-2x-support"&gt;Improved Ruby 2.x support&lt;/h3&gt;
+
+&lt;p&gt;Recent releases of RSpec 2.x (i.e. those that came out after
+Ruby 2.0 was released) have officially supported Ruby 2, but RSpec 3's
+support is greatly improved. We now provide support for working
+with the new features of Ruby 2, like keyword arguments and prepended
+modules.&lt;/p&gt;
+
+&lt;h3 id="new-rspec-support-gem"&gt;New rspec-support gem&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/rspec/rspec-support"&gt;rspec-support&lt;/a&gt; is a new gem
+that we're using for common code needed by more than one of
+rspec-(core|expectations|mocks|rails). It doesn't currently contain
+any public APIs intended for use by end users or extension library
+authors, but we may make some of its APIs public in the future.&lt;/p&gt;
+
+&lt;p&gt;If you run bleeding-edge RSpec by sourcing it from github in your
+Gemfile, you'll need to start doing the same for rspec-support as well.&lt;/p&gt;
+
+&lt;h3 id="robust-well-tested-upgrade-process"&gt;Robust, well-tested upgrade process&lt;/h3&gt;
+
+&lt;p&gt;Every breaking change in RSpec 3 has a corresponding deprecation warning in 2.99.
+Throughout the betas we have done many upgrades to ensure this process is as
+smooth as possible. We've put together &lt;a href="https://relishapp.com/rspec/docs/upgrade"&gt;step by step upgrade
+instructions&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The upgrade process also highlights RSpec's new deprecation system
+which is highly configurable (allowing you to output deprecations
+into a file or turn all deprecations into errors) and is designed
+to minimize duplicated deprecation output.&lt;/p&gt;
+
+&lt;h3 id="improved-docs"&gt;Improved Docs&lt;/h3&gt;
+
+&lt;p&gt;We've put a ton of effort into updating the API docs for all gems.
+They're currently hosted on &lt;a href="http://rubydoc.info/"&gt;rubydoc.info&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://rubydoc.info/github/rspec/rspec-core/frames"&gt;rspec-core&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://rubydoc.info/github/rspec/rspec-expectations/frames"&gt;rspec-expectations&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://rubydoc.info/github/rspec/rspec-mocks/frames"&gt;rspec-mocks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://rubydoc.info/github/rspec/rspec-rails/frames"&gt;rspec-rails&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;…but we're currently working on updating &lt;a href="http://rspec.info/"&gt;rspec.info&lt;/a&gt;
+to self-host them.&lt;/p&gt;
+
+&lt;p&gt;While the docs are still a work-in-progress (and frankly, always will be),
+we've made sure to explicitly declare all public APIs as part of
+&lt;a href="http://semver.org/"&gt;SemVer&lt;/a&gt; compliance. We're absolutely committed to
+maintaining all public APIs through all 3.x releases. Private APIs, on
+the other hand, are labeled as such because we specifically want to
+reserve the flexibility to change them willy nilly in any 3.x release.&lt;/p&gt;
+
+&lt;p&gt;Please do not use APIs we've declared private. If you find yourself
+with a need not addressed by the existing public APIs, please ask.
+We'll gladly either make a private API public for your needs
+or add a new API to meet your use case.&lt;/p&gt;
+
+&lt;h3 id="gems-are-now-signed"&gt;Gems are now signed&lt;/h3&gt;
+
+&lt;p&gt;We've started signing our gem releases. While the current gem signing
+system is far from ideal, and &lt;a href="http://corner.squareup.com/2013/12/securing-rubygems-with-tuf-part-1.html"&gt;a better
+solution&lt;/a&gt;
+is being developed, it's better than nothing. We've put our public cert on
+&lt;a href="https://github.com/rspec/rspec/blob/master/certs/rspec.pem"&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For more details on the current gem signing system, see &lt;a href="http://blog.meldium.com/home/2013/3/3/signed-rubygems-part"&gt;A Practical
+Guide to Using Signed Ruby
+Gems&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id="zero-monkey-patching-mode"&gt;Zero monkey patching mode&lt;/h3&gt;
+
+&lt;p&gt;RSpec can now be used without any monkey patching whatsoever.
+Much of the groundwork for this was laid in recent 2.x releases
+that added the new &lt;code&gt;expect&lt;/code&gt;-based syntax to rspec-expectations
+and rspec-mocks. We've gone the rest of the way in RSpec 3 and
+provided alternatives for the remaining monkey patches.&lt;/p&gt;
+
+&lt;p&gt;For convenience you can disable all of the monkey patches with one option:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="c1"&gt;# spec/spec_helper.rb&lt;/span&gt;
+&lt;span class="no"&gt;RSpec&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;configure&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;disable_monkey_patching!&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thanks to &lt;a href="https://github.com/waterlink"&gt;Alexey Fedorov&lt;/a&gt; for
+&lt;a href="https://github.com/rspec/rspec-core/pull/1465"&gt;implementing&lt;/a&gt; this config option.&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://rubydoc.info/github/rspec/rspec-core/RSpec/Core/Configuration#disable_monkey_patching%21-instance_method"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="rspec-core"&gt;rspec-core&lt;/h2&gt;
+
+&lt;h3 id="new-names-for-hook-scopes-example-and-context"&gt;New names for hook scopes: &lt;code&gt;:example&lt;/code&gt; and &lt;code&gt;:context&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;RSpec 2.x had three different hook scopes:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;describe&lt;/span&gt; &lt;span class="no"&gt;MyClass&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="n"&gt;before&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:each&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="c1"&gt;# runs before each example in this group&lt;/span&gt;
+  &lt;span class="n"&gt;before&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:all&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="c1"&gt;# runs once before the first example in this group&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="c1"&gt;# spec/spec_helper.rb&lt;/span&gt;
+&lt;span class="no"&gt;RSpec&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;configure&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;before&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:each&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="c1"&gt;# runs before each example in the entire test suite&lt;/span&gt;
+  &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;before&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:all&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="c1"&gt;# runs before the first example of each top-level group&lt;/span&gt;
+  &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;before&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:suite&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="c1"&gt;# runs once after all spec files have been loaded, before the first spec runs&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;At times, users have expressed confusion around what &lt;code&gt;:each&lt;/code&gt; vs &lt;code&gt;:all&lt;/code&gt;
+means, and &lt;code&gt;:all&lt;/code&gt; in particular can be confusing when you use it in a
+config block:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="c1"&gt;# spec/spec_helper.rb&lt;/span&gt;
+&lt;span class="no"&gt;RSpec&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;configure&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;before&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:all&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In this context, the term &lt;code&gt;:all&lt;/code&gt; suggests that this hook will run once
+before all examples in the suite — but that is what &lt;code&gt;:suite&lt;/code&gt; is for.&lt;/p&gt;
+
+&lt;p&gt;In RSpec 3, &lt;code&gt;:each&lt;/code&gt; and &lt;code&gt;:all&lt;/code&gt; have aliases that make their scope
+more explicit: &lt;code&gt;:example&lt;/code&gt; is an alias of &lt;code&gt;:each&lt;/code&gt; and &lt;code&gt;:context&lt;/code&gt;
+is an alias of &lt;code&gt;:all&lt;/code&gt;. Note that &lt;code&gt;:each&lt;/code&gt; and &lt;code&gt;:all&lt;/code&gt; are &lt;em&gt;not&lt;/em&gt; deprecated
+and we have no plans to do so.&lt;/p&gt;
+
+&lt;p&gt;Thanks to &lt;a href="https://github.com/fj"&gt;John Feminella&lt;/a&gt; for
+&lt;a href="https://github.com/rspec/rspec-core/pull/1174"&gt;implementing&lt;/a&gt; this.&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://rubydoc.info/github/rspec/rspec-core/RSpec/Core/Hooks#before-instance_method"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-core/pull/297"&gt;rspec-core #297 - original discussion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="dsl-methods-yield-the-example-as-an-argument"&gt;DSL methods yield the example as an argument&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;RSpec::Core::Example&lt;/code&gt; provides access to all the details about an
+example: its description, location, metadata, execution result, etc.
+In RSpec 2.x the example was exposed via an &lt;code&gt;example&lt;/code&gt; method that could
+be accessed from any hook or individual example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;describe&lt;/span&gt; &lt;span class="no"&gt;MyClass&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="n"&gt;before&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:each&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="n"&gt;example&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;metadata&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In RSpec 3, we've removed the &lt;code&gt;example&lt;/code&gt; method. Instead, the example
+instance is yielded to all example-scoped DSL methods as an explicit
+argument:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;describe&lt;/span&gt; &lt;span class="no"&gt;MyClass&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="n"&gt;before&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:example&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;ex&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="n"&gt;ex&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;metadata&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="n"&gt;let&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:example_description&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;ex&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;ex&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;description&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+
+  &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="s1"&gt;'accesses the example'&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;ex&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+    &lt;span class="c1"&gt;# use ex&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thanks to &lt;a href="https://github.com/dchelimsky"&gt;David Chelimsky&lt;/a&gt; for coming up
+with the idea and
+&lt;a href="https://github.com/rspec/rspec-core/pull/666"&gt;implementing&lt;/a&gt; it!&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://rubydoc.info/github/rspec/rspec-core/RSpec/Core/Example"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="new-exposedslglobally-config-option-to-disable-rspec-core-monkey-patching"&gt;New &lt;code&gt;expose_dsl_globally&lt;/code&gt; config option to disable rspec-core monkey patching&lt;/h3&gt;
+
+&lt;p&gt;RSpec 2.x monkey patched &lt;code&gt;main&lt;/code&gt; and &lt;code&gt;Module&lt;/code&gt; to provide top level
+methods like &lt;code&gt;describe&lt;/code&gt;, &lt;code&gt;shared_examples_for&lt;/code&gt; and &lt;code&gt;shared_context&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;shared_examples_for&lt;/span&gt; &lt;span class="s2"&gt;"something"&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+
+&lt;span class="k"&gt;module&lt;/span&gt; &lt;span class="nn"&gt;MyGem&lt;/span&gt;
+  &lt;span class="n"&gt;describe&lt;/span&gt; &lt;span class="no"&gt;SomeClass&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="n"&gt;it_behaves_like&lt;/span&gt; &lt;span class="s2"&gt;"something"&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In RSpec 3, these methods are now also available on the &lt;code&gt;RSpec&lt;/code&gt; module
+(in addition to still being available as monkey patches):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="no"&gt;RSpec&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;shared_examples_for&lt;/span&gt; &lt;span class="s2"&gt;"something"&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+
+&lt;span class="k"&gt;module&lt;/span&gt; &lt;span class="nn"&gt;MyGem&lt;/span&gt;
+  &lt;span class="no"&gt;RSpec&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;describe&lt;/span&gt; &lt;span class="no"&gt;SomeClass&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="n"&gt;it_behaves_like&lt;/span&gt; &lt;span class="s2"&gt;"something"&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can completely remove rspec-core's monkey patching (which
+would make the first example above raise &lt;code&gt;NoMethodError&lt;/code&gt;) by
+setting the new &lt;code&gt;expose_dsl_globally&lt;/code&gt; config option to &lt;code&gt;false&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="c1"&gt;# spec/spec_helper.rb&lt;/span&gt;
+&lt;span class="no"&gt;RSpec&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;configure&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;expose_dsl_globally&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kp"&gt;false&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thanks to &lt;a href="https://github.com/JonRowe"&gt;Jon Rowe&lt;/a&gt; for
+&lt;a href="https://github.com/rspec/rspec-core/pull/1036"&gt;implementing&lt;/a&gt; this.&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://relishapp.com/rspec/rspec-core/v/3-0/docs/configuration/global-namespace-dsl"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="define-example-group-aliases-with-aliasexamplegroupto"&gt;Define example group aliases with &lt;code&gt;alias_example_group_to&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;In RSpec 2.x, we provided an API that allowed you to define &lt;code&gt;example&lt;/code&gt;
+aliases with attached metadata. For example, this is used internally to
+define &lt;code&gt;fit&lt;/code&gt; as an alias for &lt;code&gt;it&lt;/code&gt; with &lt;code&gt;:focus =&amp;gt; true&lt;/code&gt; metadata:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="c1"&gt;# spec/spec_helper.rb&lt;/span&gt;
+&lt;span class="no"&gt;RSpec&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;configure&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;alias_example_to&lt;/span&gt; &lt;span class="ss"&gt;:fit&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:focus&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="kp"&gt;true&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In RSpec 3, we've extended this feature to example groups:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="c1"&gt;# spec/spec_helper.rb&lt;/span&gt;
+&lt;span class="no"&gt;RSpec&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;configure&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;alias_example_group_to&lt;/span&gt; &lt;span class="ss"&gt;:describe_model&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:type&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="ss"&gt;:model&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You could use this example in a project using rspec-rails and use
+&lt;code&gt;describe_model User&lt;/code&gt; rather than &lt;code&gt;describe User, :type =&amp;gt; :model&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thanks to &lt;a href="https://github.com/michihuber"&gt;Michi Huber&lt;/a&gt; for
+&lt;a href="https://github.com/rspec/rspec-core/pull/1236"&gt;implementing&lt;/a&gt; this.&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://rubydoc.info/github/rspec/rspec-core/RSpec/Core/Configuration#alias_example_group_to-instance_method"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-core/issues/493"&gt;rspec-core #493 - original discussion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="new-example-group-aliases-xdescribe-xcontext-fdescribe-fcontext"&gt;New example group aliases: &lt;code&gt;xdescribe&lt;/code&gt;, &lt;code&gt;xcontext&lt;/code&gt;, &lt;code&gt;fdescribe&lt;/code&gt;, &lt;code&gt;fcontext&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;Besides including an API to define example group aliases, we've also
+included several additional built-in aliases (on top of &lt;code&gt;describe&lt;/code&gt; and
+&lt;code&gt;context&lt;/code&gt;):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;xdescribe&lt;/code&gt;/&lt;code&gt;xcontext&lt;/code&gt;, like &lt;code&gt;xit&lt;/code&gt; for examples, can be used to temporarily skip an
+example group.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;fdescribe&lt;/code&gt;/&lt;code&gt;fcontext&lt;/code&gt;, like &lt;code&gt;fit&lt;/code&gt; for examples, can be used to temporarily add
+&lt;code&gt;:focus =&amp;gt; true&lt;/code&gt; metadata to an example group so that you can easily
+filter to the focused examples and groups via &lt;code&gt;config.filter_run :focus&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://rubydoc.info/github/rspec/rspec-core/RSpec/Core/ExampleGroup"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-core/pull/1255"&gt;rspec-core #1255 - implementation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="changes-to-pending-semantics-and-introduction-of-skip"&gt;Changes to &lt;code&gt;pending&lt;/code&gt; semantics (and introduction of &lt;code&gt;skip&lt;/code&gt;)&lt;/h3&gt;
+
+&lt;p&gt;Pending examples are now run to check if they are actually passing. If
+a pending block fails, then it will be marked pending as before. However, if
+it succeeds it will cause a failure. This helps ensure that pending examples are
+valid, and also that they are promptly dealt with when the behaviour they
+describe is implemented.&lt;/p&gt;
+
+&lt;p&gt;To support the old "never run" behaviour, the &lt;code&gt;skip&lt;/code&gt; method and metadata has
+been added. None of the following examples will ever be run:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;describe&lt;/span&gt; &lt;span class="no"&gt;Post&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="n"&gt;skip&lt;/span&gt; &lt;span class="s1"&gt;'not implemented yet'&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+
+  &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="s1"&gt;'does something'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:skip&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="kp"&gt;true&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+
+  &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="s1"&gt;'does something'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:skip&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;'reason explanation'&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+
+  &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="s1"&gt;'does something else'&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="n"&gt;skip&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+
+  &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="s1"&gt;'does something else'&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="n"&gt;skip&lt;/span&gt; &lt;span class="s1"&gt;'reason explanation'&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;With this change, passing a block to &lt;code&gt;pending&lt;/code&gt; within an example no longer
+makes sense, so that behaviour has been removed.&lt;/p&gt;
+
+&lt;p&gt;Thanks to &lt;a href="http://xaviershay.com"&gt;Xavier Shay&lt;/a&gt; for
+&lt;a href="https://github.com/rspec/rspec-core/pull/1267"&gt;implementing&lt;/a&gt; this.&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://relishapp.com/rspec/rspec-core/v/3-0/docs/pending-and-skipped-examples"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-core/issues/1208"&gt;rspec-core #1208 - original discussion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="new-api-for-one-liners-isexpected"&gt;New API for one-liners: &lt;code&gt;is_expected&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;RSpec has had a one-liner syntax for many years:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;describe&lt;/span&gt; &lt;span class="no"&gt;Post&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="n"&gt;should&lt;/span&gt; &lt;span class="n"&gt;allow_mass_assignment_of&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:title&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In this context, &lt;code&gt;should&lt;/code&gt; is &lt;em&gt;not&lt;/em&gt; the monkey-patched &lt;code&gt;should&lt;/code&gt;
+that can be removed by configuring rspec-expectations to only
+support the &lt;code&gt;:expect&lt;/code&gt; syntax. It doesn't have the baggage that
+monkey-patching &lt;code&gt;Object&lt;/code&gt; with &lt;code&gt;should&lt;/code&gt; brings, and is always
+available regardless of your syntax configuration.&lt;/p&gt;
+
+&lt;p&gt;Some users have expressed confusion about how this &lt;code&gt;should&lt;/code&gt; relates
+to the &lt;code&gt;expect&lt;/code&gt; syntax and if you can continue using it. It will continue
+to be available in RSpec 3 (again, regardless of your syntax configuration),
+but we've also added an alternate API that is a bit more consistent with
+the &lt;code&gt;expect&lt;/code&gt; syntax:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;describe&lt;/span&gt; &lt;span class="no"&gt;Post&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="n"&gt;is_expected&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;allow_mass_assignment_of&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:title&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;is_expected&lt;/code&gt; is defined very simply as &lt;code&gt;expect(subject)&lt;/code&gt; and also
+supports negative expectations via &lt;code&gt;is_expected.not_to matcher&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://rubydoc.info/github/rspec/rspec-core/RSpec/Core/MemoizedHelpers#is_expected-instance_method"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-core/pull/1180"&gt;rspec-core #1180 - implementation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="example-groups-can-be-ordered-individually"&gt;Example groups can be ordered individually&lt;/h3&gt;
+
+&lt;p&gt;RSpec 2.8 introduced random ordering to RSpec, which is very useful for
+surfacing unintentional ordering dependencies in your spec suite. In
+RSpec 3, it's no longer an all-or-nothing feature. You can control how
+individual example groups are ordered by tagging them with appropriate
+metadata:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;describe&lt;/span&gt; &lt;span class="no"&gt;MyClass&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:order&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="ss"&gt;:defined&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="c1"&gt;# examples in this group will always run in defined order,&lt;/span&gt;
+  &lt;span class="c1"&gt;# regardless of any other ordering configuration.&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+
+&lt;span class="n"&gt;describe&lt;/span&gt; &lt;span class="no"&gt;MyClass&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:order&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="ss"&gt;:random&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="c1"&gt;# examples in this group will always run in random order,&lt;/span&gt;
+  &lt;span class="c1"&gt;# regardless of any other ordering configuration.&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is particularly useful for migrating from defined to random
+ordering, as it allows you to deal with ordering dependencies one-by-one
+as you opt-in to the feature for particular groups rather than
+having to solve the issues all at once.&lt;/p&gt;
+
+&lt;p&gt;As part of this we've also renamed &lt;code&gt;--order default&lt;/code&gt; to &lt;code&gt;--order
+defined&lt;/code&gt;, because we realized that "default" was a highly overloaded
+term.&lt;/p&gt;
+
+&lt;p&gt;Thanks to &lt;a href="https://github.com/alindeman"&gt;Andy Lindeman&lt;/a&gt; and &lt;a href="https://github.com/samphippen"&gt;Sam
+Phippen&lt;/a&gt; for helping
+&lt;a href="https://github.com/rspec/rspec-core/pull/1025"&gt;implement&lt;/a&gt; this feature.&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://rubydoc.info/github/rspec/rspec-core/RSpec/Core/Configuration#register_ordering-instance_method"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="new-ordering-strategy-api"&gt;New ordering strategy API&lt;/h3&gt;
+
+&lt;p&gt;In RSpec 3, we've overhauled the ordering strategy API. What used to be
+&lt;a href="http://rubydoc.info/gems/rspec-core/2.14.8/RSpec/Core/Configuration:order_examples"&gt;three&lt;/a&gt;
+&lt;a href="http://rubydoc.info/gems/rspec-core/2.14.8/RSpec/Core/Configuration:order_groups"&gt;different&lt;/a&gt;
+&lt;a href="http://rubydoc.info/gems/rspec-core/2.14.8/RSpec/Core/Configuration:order_groups_and_examples"&gt;methods&lt;/a&gt;
+is now one method: &lt;code&gt;register_ordering&lt;/code&gt;. Use it to define a named ordering
+strategy:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="c1"&gt;# spec/spec_helper.rb&lt;/span&gt;
+&lt;span class="no"&gt;RSpec&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;configure&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;register_ordering&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:description_length&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+    &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;sort_by&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;description&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;length&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;describe&lt;/span&gt; &lt;span class="no"&gt;MyClass&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:order&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="ss"&gt;:description_length&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="c1"&gt;# ...&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or, you can use it to define the global ordering:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="c1"&gt;# spec/spec_helper.rb&lt;/span&gt;
+&lt;span class="no"&gt;RSpec&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;configure&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;register_ordering&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:global&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+    &lt;span class="c1"&gt;# sort them alphabetically&lt;/span&gt;
+    &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;sort_by&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;description&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;:global&lt;/code&gt; ordering is used to order the top-level example groups
+and to order all example groups that do not have &lt;code&gt;:order&lt;/code&gt; metadata.&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://rubydoc.info/github/rspec/rspec-core/RSpec/Core/Configuration#register_ordering-instance_method"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-core/pull/1025"&gt;rspec-core #1025 - implementation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="rspec---init-improvements"&gt;&lt;code&gt;rspec --init&lt;/code&gt; improvements&lt;/h3&gt;
+
+&lt;p&gt;The &lt;code&gt;rspec&lt;/code&gt; command has provided the &lt;code&gt;--init&lt;/code&gt; option to setup a project
+skeleton for a long time. In RSpec 3, the files it produces have been
+greatly improved to provide a better out-of-the-box experience and
+to provide a &lt;code&gt;spec/spec_helper.rb&lt;/code&gt; file with more recommended settings.&lt;/p&gt;
+
+&lt;p&gt;Note that recommended settings which are not slated to become future
+defaults are commented out in the generated file, so it's a good idea
+to open the file and accept the recommendations you want.&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-core/pull/1219"&gt;rspec-core #1219 - implementation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="new---dry-run-cli-option"&gt;New &lt;code&gt;--dry-run&lt;/code&gt; CLI option&lt;/h3&gt;
+
+&lt;p&gt;This option will print the formatter output of your spec suite
+without running any of the examples or hooks. It's particularly
+useful as way to review your suite's documentation output without
+waiting for your specs to run or worrying about their pass/fail
+status.&lt;/p&gt;
+
+&lt;p&gt;Thanks to &lt;a href="https://github.com/schnittchen"&gt;Thomas Stratmann&lt;/a&gt; for
+&lt;a href="https://github.com/rspec/rspec-core/pull/1028"&gt;contributing&lt;/a&gt; this!&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://relishapp.com/rspec/rspec-core/v/3-0/docs/command-line/dry-run-option"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-core/issues/1022"&gt;rspec-core #1022 - original discussion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="formatter-api-changes"&gt;Formatter API changes&lt;/h3&gt;
+
+&lt;p&gt;A completely new formatter API has been added that is much more flexible.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Subscribe only to the events you care about.&lt;/li&gt;
+  &lt;li&gt;Methods receive notification objects rather than specific parameters,
+so new notification data can be added in a backwards compatible manner.&lt;/li&gt;
+  &lt;li&gt;Helper methods are exposed on notification objects such that inheriting
+from &lt;code&gt;BaseTextFormatter&lt;/code&gt; is no longer effectively necessary.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A new formatters looks like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;CustomFormatter&lt;/span&gt;
+  &lt;span class="nc"&gt;RSpec&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Core&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Formatters&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;register&lt;/span&gt; &lt;span class="nb"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:example_started&lt;/span&gt;
+
+  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;initialize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="vi"&gt;@output&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+
+  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;example_started&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;notification&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="vi"&gt;@output&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s2"&gt;"example: "&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;notification&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;example&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;description&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;a href="https://github.com/rspec/rspec-legacy_formatters"&gt;rspec-legacy_formatters
+gem&lt;/a&gt; is provided to continue
+to support the old 2.x formatter API.&lt;/p&gt;
+
+&lt;p&gt;Thanks to &lt;a href="https://github.com/JonRowe"&gt;Jon Rowe&lt;/a&gt; for taking charge of
+this.&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/tpope/fivemat/blob/3f4f550fa2852a34a020d31d834a7a3f0210b1ca/lib/fivemat/rspec3.rb"&gt;Fivemat's RSpec 3 formatter (example of a full formatter implemenation)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="assertion-config-changes"&gt;Assertion config changes&lt;/h3&gt;
+
+&lt;p&gt;While most users use rspec-expectations, it's trivial to use something
+else and RSpec 2.x made the most common alternate easily available via
+a config option:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="c1"&gt;# spec/spec_helper.rb&lt;/span&gt;
+&lt;span class="no"&gt;RSpec&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;configure&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;expect_with&lt;/span&gt; &lt;span class="ss"&gt;:stdlib&lt;/span&gt;
+  &lt;span class="c1"&gt;# or, to use both:&lt;/span&gt;
+  &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;expect_with&lt;/span&gt; &lt;span class="ss"&gt;:stdlib&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:rspec&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;However, there's been confusion around &lt;code&gt;:stdlib&lt;/code&gt;. On Ruby 1.8, the
+standard lib assertion module is &lt;code&gt;Test::Unit::Assertions&lt;/code&gt;. On 1.9+ it's
+a thin wrapper over &lt;code&gt;Minitest::Assertions&lt;/code&gt; (and you're generally better
+off using just that).  Meanwhile, there's also a test-unit gem
+that defines &lt;code&gt;Test::Unit::Assertions&lt;/code&gt; (which is &lt;em&gt;not&lt;/em&gt; a wrapper over
+minitest) and a minitest gem.&lt;/p&gt;
+
+&lt;p&gt;For RSpec 3, we've removed &lt;code&gt;expect_with :stdlib&lt;/code&gt; and instead opted
+for explicit &lt;code&gt;:test_unit&lt;/code&gt; and &lt;code&gt;:minitest&lt;/code&gt; options:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="c1"&gt;# spec/spec_helper.rb&lt;/span&gt;
+&lt;span class="no"&gt;RSpec&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;configure&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="c1"&gt;# for test-unit:&lt;/span&gt;
+  &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;expect_with&lt;/span&gt; &lt;span class="ss"&gt;:test_unit&lt;/span&gt;
+
+  &lt;span class="c1"&gt;# for minitest:&lt;/span&gt;
+  &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;expect_with&lt;/span&gt; &lt;span class="ss"&gt;:minitest&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thanks to &lt;a href="http://aaronkromer.com/"&gt;Aaron Kromer&lt;/a&gt; for &lt;a href="https://github.com/rspec/rspec-core/pull/1466"&gt;implementing
+this&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://rubydoc.info/github/rspec/rspec-core/RSpec/Core/Configuration#expect_with-instance_method"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="define-derived-metadata"&gt;Define derived metadata&lt;/h3&gt;
+
+&lt;p&gt;RSpec's metadata system is extremely flexible, allowing you to slice and
+dice your test suite in many ways. There's a new config API that allows
+you to define derived metadata. For example, to automatically tag all
+example groups in &lt;code&gt;spec/acceptance/js&lt;/code&gt; with &lt;code&gt;:js =&amp;gt; true&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="c1"&gt;# spec/spec_helper.rb&lt;/span&gt;
+&lt;span class="no"&gt;RSpec&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;configure&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;define_derived_metadata&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:file_path&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="sr"&gt;%r{/spec/acceptance/js/}&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;metadata&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+    &lt;span class="n"&gt;metadata&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="ss"&gt;:js&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kp"&gt;true&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://rubydoc.info/github/rspec/rspec-core/RSpec/Core/Configuration#define_derived_metadata-instance_method"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-core/pull/1496"&gt;rspec-core #1496 - implementation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-core/issues/969"&gt;rspec-core #969 - original discussion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="removals"&gt;Removals&lt;/h3&gt;
+
+&lt;p&gt;Several things that are no longer core to RSpec have either been removed
+entirely or extracted into an external gem:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The Textmate formatter has been moved into the &lt;a href="https://github.com/rspec/rspec-tmbundle"&gt;Textmate
+bundle&lt;/a&gt;.
+Having a formatter for one specific text editor in rspec-core doesn't
+really make sense.&lt;/li&gt;
+  &lt;li&gt;RCov integration has been dropped. It was never updated to work with
+1.9+ and these days we recommend using
+&lt;a href="https://github.com/colszowka/simplecov"&gt;simplecov&lt;/a&gt; instead.&lt;/li&gt;
+  &lt;li&gt;The &lt;code&gt;--debug&lt;/code&gt; CLI option has been removed. These days there are many
+different debugger options, and you can activate them from the command
+line using the &lt;code&gt;--require&lt;/code&gt; (or &lt;code&gt;-r&lt;/code&gt;) option. For example, to use
+&lt;a href="https://github.com/deivid-rodriguez/byebug"&gt;byebug&lt;/a&gt;, pass &lt;code&gt;-rbyebug&lt;/code&gt;
+at the command line.&lt;/li&gt;
+  &lt;li&gt;We've removed the &lt;code&gt;--line-number&lt;/code&gt; CLI option. It had dubious semantics
+to begin with (&lt;code&gt;--line-number 43&lt;/code&gt; would filter to the example defined
+near line 43 in every loaded spec file, but there's no reason line 43 in
+each file would be related), and duplicates the more terse
+&lt;code&gt;path/to/spec.rb:43&lt;/code&gt; form.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;its&lt;/code&gt; has been extracted into the new
+&lt;a href="https://github.com/rspec/rspec-its"&gt;rspec-its&lt;/a&gt; gem, which
+&lt;a href="https://github.com/palfvin"&gt;Peter Alfvin&lt;/a&gt; has kindly offered to maintain.&lt;/li&gt;
+  &lt;li&gt;Autotest integration has been extracted into the new new
+&lt;a href="https://github.com/rspec/rspec-autotest"&gt;rspec-autotest&lt;/a&gt; gem (which
+could use a maintainer: any volunteers?).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="rspec-expectations"&gt;rspec-expectations&lt;/h2&gt;
+
+&lt;h3 id="using-should-syntax-without-explicitly-enabling-it-is-deprecated"&gt;Using &lt;code&gt;should&lt;/code&gt; syntax without explicitly enabling it is deprecated&lt;/h3&gt;
+
+&lt;p&gt;In RSpec 2.11 we started the move towards eliminating monkey patching
+from RSpec by &lt;a href="/blog/2012/06/rspecs-new-expectation-syntax"&gt;introducing a new expect-based
+syntax&lt;/a&gt;.
+In RSpec 3, we've kept the &lt;code&gt;should&lt;/code&gt; syntax, and it is available by
+default, but you will get a deprecation warning if you use it without
+explicitly enabling it. This will pave the way for it being disabled
+by default (or potentially extracted into a seperate gem) in RSpec 4,
+while minimizing confusion for newcomers coming to RSpec via an old tutorial.&lt;/p&gt;
+
+&lt;p&gt;We consider the &lt;code&gt;expect&lt;/code&gt; syntax to be the "main" syntax of RSpec now,
+but if you prefer the older &lt;code&gt;should&lt;/code&gt;-based syntax, feel free to keep using it:
+we have no plans to ever kill it.&lt;/p&gt;
+
+&lt;p&gt;Thanks to &lt;a href="https://github.com/samphippen"&gt;Sam Phippen&lt;/a&gt; for
+&lt;a href="https://github.com/rspec/rspec-expectations/pull/326"&gt;implementing&lt;/a&gt;
+this.&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://relishapp.com/rspec/rspec-expectations/v/3-0/docs/syntax-configuration"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="compound-matcher-expressions"&gt;Compound Matcher Expressions&lt;/h3&gt;
+
+&lt;p&gt;In RSpec 3, you can chain multiple matchers together using &lt;code&gt;and&lt;/code&gt; or &lt;code&gt;or&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="c1"&gt;# these two expectations...&lt;/span&gt;
+&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alphabet&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;start_with&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"a"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alphabet&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;end_with&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"z"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# ...can be combined into one expression:&lt;/span&gt;
+&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alphabet&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;start_with&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"a"&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;and&lt;/span&gt; &lt;span class="n"&gt;end_with&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"z"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# You can also use `or`:&lt;/span&gt;
+&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;stoplight&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;color&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;eq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"red"&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;or&lt;/span&gt; &lt;span class="n"&gt;eq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"green"&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;or&lt;/span&gt; &lt;span class="n"&gt;eq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"yellow"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;These are aliased to the &lt;code&gt;&amp;amp;&lt;/code&gt; and &lt;code&gt;|&lt;/code&gt; operators:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alphabet&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;start_with&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"a"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;end_with&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"z"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;stoplight&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;color&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;eq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"red"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;eq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"green"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;eq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"yellow"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thanks to &lt;a href="https://github.com/eloyesp"&gt;Eloy Espinaco&lt;/a&gt; for &lt;a href="https://github.com/rspec/rspec-expectations/pull/329"&gt;suggesting and
+implementing&lt;/a&gt;
+this feature, and to &lt;a href="https://github.com/yelled3"&gt;Adam Farhi&lt;/a&gt; for &lt;a href="https://github.com/rspec/rspec-expectations/pull/537"&gt;extending
+it&lt;/a&gt; with the &lt;code&gt;&amp;amp;&lt;/code&gt; and &lt;code&gt;|&lt;/code&gt; operators.&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="/blog/2014/01/new-in-rspec-3-composable-matchers#compound_matcher_expressions"&gt;New in RSpec 3: Composable Matchers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://relishapp.com/rspec/rspec-expectations/v/3-0/docs/compound-expectations"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="composable-matchers"&gt;Composable Matchers&lt;/h3&gt;
+
+&lt;p&gt;RSpec 3 allows you to expressed detailed intent by passing matchers
+as arguments to other matchers:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"food"&lt;/span&gt;
+&lt;span class="n"&gt;expect&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"barn"&lt;/span&gt; &lt;span class="p"&gt;}.&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;change&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="p"&gt;}.&lt;/span&gt;
+  &lt;span class="nf"&gt;from&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;a_string_matching&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sr"&gt;/foo/&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;).&lt;/span&gt;
+  &lt;span class="nf"&gt;to&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;a_string_matching&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sr"&gt;/bar/&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;expect&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;probe&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="s2"&gt;"food"&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;tap&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;probe&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;}.&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;yield_with_args&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;a_string_starting_with&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"f"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For improved readability in both the code expression and failure
+messages, most matchers have aliases that read properly when
+passed as arguments in these sorts of expressions.&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="/blog/2014/01/new-in-rspec-3-composable-matchers"&gt;New in RSpec 3: Composable Matchers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-expectations/issues/280"&gt;rspec-expectations #280 - original discussion&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-expectations/pull/393"&gt;rspec-expectations #393 - implementation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://rubydoc.info/github/rspec/rspec-expectations/RSpec/Matchers"&gt;API Documentation (including list of matcher aliases)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://relishapp.com/rspec/rspec-expectations/v/3-0/docs/composing-matchers"&gt;Relish Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="match-matcher-can-be-used-for-data-structures"&gt;&lt;code&gt;match&lt;/code&gt; matcher can be used for data structures&lt;/h3&gt;
+
+&lt;p&gt;Before RSpec 3, the &lt;code&gt;match&lt;/code&gt; matcher existed to perform string/regex
+matching using the &lt;code&gt;#match&lt;/code&gt; method:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"food"&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;match&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"foo"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"food"&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;match&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sr"&gt;/foo/&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In RSpec 3, it additionally supports matching arbitrarily nested
+array/hash data structures. The expected value can be expressed
+using matchers at any level of nesting:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="nb"&gt;hash&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="ss"&gt;:a&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="ss"&gt;:b&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"foo"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+    &lt;span class="ss"&gt;:c&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="ss"&gt;:d&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mo"&gt;05&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;hash&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;match&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+  &lt;span class="ss"&gt;:a&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="ss"&gt;:b&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a_collection_containing_exactly&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+      &lt;span class="n"&gt;an_instance_of&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="no"&gt;Fixnum&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+      &lt;span class="n"&gt;a_string_starting_with&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"f"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="ss"&gt;:c&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="ss"&gt;:d&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a_value&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="/blog/2014/01/new-in-rspec-3-composable-matchers#match"&gt;New in RSpec 3: Composable Matchers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="new-all-matcher"&gt;New &lt;code&gt;all&lt;/code&gt; matcher&lt;/h3&gt;
+
+&lt;p&gt;This matcher lets you specify that something is true of all items in a
+collection. Pass a matcher as an argument:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;]).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;all&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;be_odd&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thanks to &lt;a href="https://github.com/yelled3"&gt;Adam Farhi&lt;/a&gt; for
+&lt;a href="https://github.com/rspec/rspec-expectations/pull/491"&gt;contributing&lt;/a&gt; this!&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://rubydoc.info/github/rspec/rspec-expectations/RSpec/Matchers#all-instance_method"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="new-output-matcher"&gt;New &lt;code&gt;output&lt;/code&gt; matcher&lt;/h3&gt;
+
+&lt;p&gt;This matcher can be used to specify that a block writes to either stdout
+or stderr:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;expect&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;"foo"&lt;/span&gt; &lt;span class="p"&gt;}.&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"foo"&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to_stdout&lt;/span&gt;
+&lt;span class="n"&gt;expect&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;"foo"&lt;/span&gt; &lt;span class="p"&gt;}.&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sr"&gt;/fo/&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to_stdout&lt;/span&gt;
+&lt;span class="n"&gt;expect&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nb"&gt;warn&lt;/span&gt;  &lt;span class="s2"&gt;"bar"&lt;/span&gt; &lt;span class="p"&gt;}.&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sr"&gt;/bar/&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to_stderr&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thanks to &lt;a href="https://github.com/matthias-guenther"&gt;Matthias Günther&lt;/a&gt; for
+&lt;a href="https://github.com/rspec/rspec-expectations/pull/399"&gt;suggesting&lt;/a&gt; this
+(and for getting the ball rolling) and &lt;a href="https://github.com/lucapette"&gt;Luca
+Pette&lt;/a&gt; for &lt;a href="https://github.com/rspec/rspec-expectations/pull/410"&gt;taking the feature
+across the finish line&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://rubydoc.info/github/rspec/rspec-expectations/RSpec/Matchers#output-instance_method"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="new-bebetween-matcher"&gt;New &lt;code&gt;be_between&lt;/code&gt; matcher&lt;/h3&gt;
+
+&lt;p&gt;RSpec 2 provided a &lt;code&gt;be_between&lt;/code&gt; matcher for objects that implement
+&lt;code&gt;between?&lt;/code&gt; using the dynamic predicate support. In RSpec 3, we are
+gaining a first class &lt;code&gt;be_between&lt;/code&gt; matcher that is better in a few ways:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The failure message is much better — rather than telling you that
+&lt;code&gt;between?(1, 10)&lt;/code&gt; returned false, it will tell you &lt;code&gt;expected 11 to be
+between 1 and 10&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;It works on objects that implement the comparison operators (e.g. &lt;code&gt;&amp;lt;&lt;/code&gt;,
+&lt;code&gt;&amp;lt;=&lt;/code&gt;, &lt;code&gt;&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;gt;=&lt;/code&gt;) but do not implement &lt;code&gt;between?&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;It provides both &lt;code&gt;inclusive&lt;/code&gt; and &lt;code&gt;exclusive&lt;/code&gt; modes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="c1"&gt;# like `Comparable#between?`, it is inclusive by default&lt;/span&gt;
+&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;be_between&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# ...but you can make it exclusive:&lt;/span&gt;
+&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;not_to&lt;/span&gt; &lt;span class="n"&gt;be_between&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;exclusive&lt;/span&gt;
+
+&lt;span class="c1"&gt;# ...or explicitly label it inclusive:&lt;/span&gt;
+&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;be_between&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;inclusive&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thanks to &lt;a href="https://github.com/sferik"&gt;Erik Michaels-Ober&lt;/a&gt; for
+&lt;a href="https://github.com/rspec/rspec-expectations/pull/405"&gt;contributing&lt;/a&gt; this and
+&lt;a href="https://github.com/pedrogimenez"&gt;Pedro Gimenez&lt;/a&gt; for
+&lt;a href="https://github.com/rspec/rspec-expectations/pull/412"&gt;improving&lt;/a&gt; it!&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://rubydoc.info/github/rspec/rspec-expectations/RSpec/Matchers#be_between-instance_method"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="boolean-matchers-have-been-renamed"&gt;Boolean matchers have been renamed&lt;/h3&gt;
+
+&lt;p&gt;RSpec 2 had a pair of matchers (&lt;code&gt;be_true&lt;/code&gt; and &lt;code&gt;be_false&lt;/code&gt;) that mirror
+Ruby's conditional semantics: &lt;code&gt;be_true&lt;/code&gt; would pass for any value besides
+&lt;code&gt;nil&lt;/code&gt; or &lt;code&gt;false&lt;/code&gt;, and &lt;code&gt;be_false&lt;/code&gt; would pass for &lt;code&gt;nil&lt;/code&gt; or &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;In RSpec 3, we've renamed these to &lt;code&gt;be_truthy&lt;/code&gt; and &lt;code&gt;be_falsey&lt;/code&gt;
+(or &lt;code&gt;be_falsy&lt;/code&gt;, if you prefer that spelling) to make their semantics
+more explicit and to reduce confusion with &lt;code&gt;be true&lt;/code&gt;/&lt;code&gt;be false&lt;/code&gt;
+(which read the same as &lt;code&gt;be_true&lt;/code&gt;/&lt;code&gt;be_false&lt;/code&gt; but only pass when given
+exact &lt;code&gt;true&lt;/code&gt;/&lt;code&gt;false&lt;/code&gt; values).&lt;/p&gt;
+
+&lt;p&gt;Thanks to &lt;a href="https://github.com/samphippen"&gt;Sam Phippen&lt;/a&gt; for
+&lt;a href="https://github.com/rspec/rspec-expectations/pull/284"&gt;implementing&lt;/a&gt;
+this.&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-expectations/issues/283"&gt;rspec-expectations #283 - original discussion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="matcharray-matcher-now-available-as-containexactly"&gt;&lt;code&gt;match_array&lt;/code&gt; matcher now available as &lt;code&gt;contain_exactly&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;RSpec has long had a matcher that allows you to match the contents of
+two arrays while disregarding any ordering differences. Originally,
+this was available using the &lt;code&gt;=~&lt;/code&gt; operator with the old &lt;code&gt;should&lt;/code&gt; syntax:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nf"&gt;should&lt;/span&gt; &lt;span class="o"&gt;=~&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Later, when we &lt;a href="/blog/2012/06/rspecs-new-expectation-syntax"&gt;added the &lt;code&gt;expect&lt;/code&gt;
+syntax&lt;/a&gt;,
+we decided not to bring the operator matchers forward to the new syntax,
+and called the matcher &lt;code&gt;match_array&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;match_array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;match_array&lt;/code&gt; was the best name we could think of at the time
+but we weren't super happy with it: "match" is an imprecise
+term and the matcher is meant to work on other kinds of collections
+besides arrays. We came up with a much better name for it
+in RSpec 3:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;contain_exactly&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that &lt;code&gt;match_array&lt;/code&gt; is &lt;em&gt;not&lt;/em&gt; deprecated. The two methods behave identically,
+except that &lt;code&gt;contain_exactly&lt;/code&gt; accepts the items splatted out individually,
+whereas &lt;code&gt;match_array&lt;/code&gt; accepts a single array argument.&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://relishapp.com/rspec/rspec-expectations/v/3-0/docs/built-in-matchers/contain-exactly-matcher"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-expectations/issues/398"&gt;rspec-expectations #398 - original discussion&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-expectations/commit/6bde36e7b4ec67fcdd239cf498bebf07f661e561"&gt;Implementation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="collection-cardinality-matchers-extracted-into-rspec-collectionmatchers-gem"&gt;Collection cardinality matchers extracted into &lt;code&gt;rspec-collection_matchers&lt;/code&gt; gem&lt;/h3&gt;
+
+&lt;p&gt;The collection cardinality matchers — &lt;code&gt;have(x).items&lt;/code&gt;,
+&lt;code&gt;have_at_least(y).items&lt;/code&gt; and &lt;code&gt;have_at_most(z).items&lt;/code&gt; — were one of
+the more "magical" and confusing parts of RSpec. They have
+been &lt;a href="https://github.com/rspec/rspec-expectations/pull/293"&gt;extracted&lt;/a&gt; into the
+&lt;a href="https://github.com/rspec/rspec-collection_matchers"&gt;rspec-collection-matchers&lt;/a&gt; gem, which
+&lt;a href="https://github.com/hugobarauna"&gt;Hugo Baraúna&lt;/a&gt; has graciously volunteered to maintain.&lt;/p&gt;
+
+&lt;p&gt;The general alternative is to set an expectation on the size of
+a collection:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;have&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;items&lt;/span&gt;
+&lt;span class="c1"&gt;# ...can be written as:&lt;/span&gt;
+&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;size&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;eq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;have_at_least&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;items&lt;/span&gt;
+&lt;span class="c1"&gt;# ...can be written as:&lt;/span&gt;
+&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;size&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+
+&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;have_at_most&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;items&lt;/span&gt;
+&lt;span class="c1"&gt;# ...can be written as:&lt;/span&gt;
+&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;size&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id="improved-integration-with-minitest"&gt;Improved integration with Minitest&lt;/h3&gt;
+
+&lt;p&gt;In RSpec 2.x, rspec-expectations would &lt;a href="https://github.com/rspec/rspec-expectations/blob/v2.14.5/lib/rspec/matchers/test_unit_integration.rb"&gt;automatically include
+itself&lt;/a&gt;
+in &lt;code&gt;MiniTest::Unit::TestCase&lt;/code&gt; or &lt;code&gt;Test::Unit::TestCase&lt;/code&gt; so that
+you could use rspec-expectations from Minitest or Test::Unit simply
+by loading it.&lt;/p&gt;
+
+&lt;p&gt;In RSpec 3, we've updated this integration in a couple ways:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Integration with Minitest 4 (or lower) or Test::Unit is no
+longer automatic. If you use rspec-expectations in such an
+environment, you'll need to &lt;code&gt;include RSpec::Matchers&lt;/code&gt; yourself.&lt;/li&gt;
+  &lt;li&gt;Improved integration with Minitest 5 is now provided, but you
+have to explicitly load it via &lt;code&gt;require 'rspec/expectations/minitest_integration'&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-expectations/blob/v3.0.0.beta2/lib/rspec/expectations/minitest_integration.rb"&gt;rspec/expectations/minitest_integration.rb&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="changes-to-the-matcher-protocol"&gt;Changes to the matcher protocol&lt;/h3&gt;
+
+&lt;p&gt;As mentioned above, in RSpec 3, we no longer consider &lt;code&gt;should&lt;/code&gt; to be
+the main syntax of rspec-expectations. We've updated the matcher
+protocol to reflect this:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;failure_message_for_should&lt;/code&gt; is now &lt;code&gt;failure_message&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;failure_message_for_should_not&lt;/code&gt; is now &lt;code&gt;failure_message_when_negated&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;match_for_should&lt;/code&gt; (an alias of &lt;code&gt;match&lt;/code&gt; in the custom matcher DSL)
+has been removed with no replacement. (Just use &lt;code&gt;match&lt;/code&gt;).&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;match_for_should_not&lt;/code&gt; in the custom matcher DSL is now
+&lt;code&gt;match_when_negated&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In addition, we've added &lt;code&gt;supports_block_expectations?&lt;/code&gt; as a new, optional part
+of the matcher protocol. This is used to give users clear errors when they
+wrongly use a value matcher in a block expectation expression. For
+example, before this change, passing a block to &lt;code&gt;expect&lt;/code&gt; when using a
+matcher like &lt;code&gt;be_nil&lt;/code&gt; could lead to false positives:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;expect&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;bar&lt;/span&gt; &lt;span class="p"&gt;}.&lt;/span&gt;&lt;span class="nf"&gt;not_to&lt;/span&gt; &lt;span class="n"&gt;be_nil&lt;/span&gt;
+
+&lt;span class="c1"&gt;# ...is equivalent to:&lt;/span&gt;
+&lt;span class="n"&gt;block&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;lambda&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;bar&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;not_to&lt;/span&gt; &lt;span class="n"&gt;be_nil&lt;/span&gt;
+
+&lt;span class="c1"&gt;# ...but the block is not nil (even though `foo.bar` might return nil),&lt;/span&gt;
+&lt;span class="c1"&gt;# so the expectation will pass even though the user probably meant:&lt;/span&gt;
+&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;bar&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;not_to&lt;/span&gt; &lt;span class="n"&gt;be_nil&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that &lt;code&gt;supports_block_expectations?&lt;/code&gt; is an optional part of the
+protocol. For matchers that are not intended to be used in block
+expectation expressions, you do not need to define it.&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-expectations/issues/270"&gt;rspec-expectations #270 - original discussion&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-expectations/pull/373"&gt;rspec-expectations #373 - implementation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-expectations/issues/526"&gt;rspec-expectations #530 - original discussion of &lt;code&gt;supports_block_expectations?&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-expectations/pull/530"&gt;rspec-expectations #530 - implementation of &lt;code&gt;supports_block_expectations?&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="rspec-mocks"&gt;rspec-mocks&lt;/h2&gt;
+
+&lt;h3 id="using-the-monkey-patched-syntax-without-explicitly-enabling-it-is-deprecated"&gt;Using the monkey-patched syntax without explicitly enabling it is deprecated&lt;/h3&gt;
+
+&lt;p&gt;As with rspec-expectations, we've been moving rspec-mocks towards a
+zero-monkey patching syntax. This was &lt;a href="http://teaisaweso.me/blog/2013/05/27/rspecs-new-message-expectation-syntax/"&gt;originally
+introduced&lt;/a&gt;
+in 2.14. In RSpec 3, you'll get a deprecation warning if you use the
+original syntax (e.g. &lt;code&gt;obj.stub&lt;/code&gt;, &lt;code&gt;obj.should_receive&lt;/code&gt;, etc) without
+explicitly enabling it (just like with rspec-expectations' new syntax).&lt;/p&gt;
+
+&lt;p&gt;Thanks to &lt;a href="https://github.com/samphippen"&gt;Sam Phippen&lt;/a&gt; for
+&lt;a href="https://github.com/rspec/rspec-mocks/pull/339"&gt;implementing&lt;/a&gt;
+this.&lt;/p&gt;
+
+&lt;h3 id="receivemessages-and-receivemessagechain-for-the-new-syntax"&gt;&lt;code&gt;receive_messages&lt;/code&gt; and &lt;code&gt;receive_message_chain&lt;/code&gt; for the new syntax&lt;/h3&gt;
+
+&lt;p&gt;The original monkey patching syntax had some features that the
+new syntax, as released in 2.14, lacked. We've addressed that
+in RSpec 3 via a couple new APIs: &lt;code&gt;receive_messages&lt;/code&gt; and
+&lt;code&gt;receive_message_chain&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="c1"&gt;# old syntax:&lt;/span&gt;
+&lt;span class="n"&gt;object&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;stub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:foo&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:bar&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;# new syntax:&lt;/span&gt;
+&lt;span class="n"&gt;allow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;object&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;receive_messages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:foo&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:bar&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# old syntax:&lt;/span&gt;
+&lt;span class="n"&gt;object&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;stub_chain&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:foo&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:bar&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:bazz&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;and_return&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;# new syntax:&lt;/span&gt;
+&lt;span class="n"&gt;allow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;object&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;receive_message_chain&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:foo&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:bar&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:bazz&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;and_return&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;One nice benefit of these new APIs is that they work with &lt;code&gt;expect&lt;/code&gt;, too,
+whereas there was no message expectation equivalent of &lt;code&gt;stub(hash)&lt;/code&gt; or
+&lt;code&gt;stub_chain&lt;/code&gt; in the old syntax.&lt;/p&gt;
+
+&lt;p&gt;Thanks to &lt;a href="https://github.com/JonRowe"&gt;Jon Rowe&lt;/a&gt; and
+&lt;a href="https://github.com/samphippen"&gt;Sam Phippen&lt;/a&gt; for implementing this.&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://rubydoc.info/github/rspec/rspec-mocks/RSpec/Mocks/ExampleMethods#receive_messages-instance_method"&gt;Documentation for &lt;code&gt;receive_messages&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://rubydoc.info/github/rspec/rspec-mocks/RSpec/Mocks/ExampleMethods#receive_message_chain-instance_method"&gt;Documentation for
+&lt;code&gt;receive_message_chain&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-mocks/issues/368"&gt;rspec-mocks #368 - discussion of &lt;code&gt;receive_messages&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-mocks/pull/399"&gt;rspec-mocks #399 - implementation of &lt;code&gt;receive_messages&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-mocks/issues/464"&gt;rspec-mocks #464 - discussion of &lt;code&gt;receive_message_chain&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-mocks/pull/467"&gt;rspec-mocks #467 - implementation of &lt;code&gt;receive_message_chain&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="removed-mock-and-stub-aliases-of-double"&gt;Removed &lt;code&gt;mock&lt;/code&gt; and &lt;code&gt;stub&lt;/code&gt; aliases of &lt;code&gt;double&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;Historically, rspec-mocks has provided 3 methods for creating
+a test double: &lt;code&gt;mock&lt;/code&gt;, &lt;code&gt;stub&lt;/code&gt; and &lt;code&gt;double&lt;/code&gt;. In RSpec 3, we've
+removed &lt;code&gt;mock&lt;/code&gt; and &lt;code&gt;stub&lt;/code&gt; in favor of just &lt;code&gt;double&lt;/code&gt;, and built
+out more features that use the &lt;code&gt;double&lt;/code&gt; nomenclature (such as
+verifying doubles — see below).&lt;/p&gt;
+
+&lt;p&gt;Of course, while RSpec 3 no longer provides &lt;code&gt;mock&lt;/code&gt; and &lt;code&gt;stub&lt;/code&gt;
+aliases of &lt;code&gt;double&lt;/code&gt;, it's easy to define these aliases on your
+own if you'd like to keep using them:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="c1"&gt;# spec/spec_helper.rb&lt;/span&gt;
+&lt;span class="k"&gt;module&lt;/span&gt; &lt;span class="nn"&gt;DoubleAliases&lt;/span&gt;
+  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;mock&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;double&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+  &lt;span class="k"&gt;alias&lt;/span&gt; &lt;span class="n"&gt;stub&lt;/span&gt; &lt;span class="n"&gt;mock&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+
+&lt;span class="no"&gt;RSpec&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;configure&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;include&lt;/span&gt; &lt;span class="no"&gt;DoubleAliases&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thanks to &lt;a href="https://github.com/samphippen"&gt;Sam Phippen&lt;/a&gt; for
+&lt;a href="https://github.com/rspec/rspec-mocks/pull/341"&gt;implementation&lt;/a&gt;
+this.&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://gist.github.com/myronmarston/6576665"&gt;Explanation for why we made this change&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="verifying-doubles"&gt;Verifying doubles&lt;/h3&gt;
+
+&lt;p&gt;A new type of double has been added that ensures you only stub or mock methods
+that actually exist, and that passed arguments conform to the declared method
+signature. The &lt;code&gt;instance_double&lt;/code&gt;, &lt;code&gt;class_double&lt;/code&gt;, and &lt;code&gt;object_double&lt;/code&gt; doubles
+will all raise an exception if those conditions aren't met. If the class has
+not been loaded (usually when running a unit test in isolation), then no
+exceptions will be raised.&lt;/p&gt;
+
+&lt;p&gt;This is a subtle behaviour, but very powerful since it allows the speed of
+isolated unit tests with the confidence closer to that of an integration test
+(or a type system). There is rarely a reason not to use these new more powerful
+double types.&lt;/p&gt;
+
+&lt;p&gt;Thanks to &lt;a href="http://xaviershay.com"&gt;Xavier Shay&lt;/a&gt; for the idea and implementation
+of this feature.&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://rhnh.net/2013/12/10/new-in-rspec-3-verifying-doubles"&gt;Blog post on motivation and uses&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://relishapp.com/rspec/rspec-mocks/v/3-0/docs/verifying-doubles"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="partial-double-verification-configuration-option"&gt;Partial double verification configuration option&lt;/h3&gt;
+
+&lt;p&gt;Verifying double behaviour can also be &lt;a href="https://relishapp.com/rspec/rspec-mocks/v/3-0/docs/verifying-doubles/partial-doubles"&gt;enabled globally on partial
+doubles&lt;/a&gt;.
+(A partial double is when you mock or stub an existing object:
+&lt;code&gt;expect(MyClass).to receive(:some_message)&lt;/code&gt;.)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="c1"&gt;# spec/spec_helper.rb&lt;/span&gt;
+&lt;span class="no"&gt;RSpec&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;configure&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;mock_with&lt;/span&gt; &lt;span class="ss"&gt;:rspec&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;mocks&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+    &lt;span class="n"&gt;mocks&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;verify_partial_doubles&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kp"&gt;true&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We recommend you enable this option for all new code.&lt;/p&gt;
+
+&lt;h3 id="scoping-changes"&gt;Scoping changes&lt;/h3&gt;
+
+&lt;p&gt;rspec-mocks's operations are designed with a per-test lifecycle in mind.
+This was documented in RSpec 2, but was not always explicitly enforced
+at runtime, and we sometimes got bug reports from users when they tried
+to use features of rspec-mocks outside of the per-test lifecycle.&lt;/p&gt;
+
+&lt;p&gt;In RSpec 3, we've tightened this up and this lifecycle is enforced
+explicitly at runtime:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Usage of rspec-mocks features from a &lt;code&gt;before(:context)&lt;/code&gt; hook (or in any
+other context when there is not a current example) is not supported.&lt;/li&gt;
+  &lt;li&gt;Test doubles are only usable for one example. If you attempt to use
+a test double outside of the example in which it originated (e.g. by
+accidentally assigning it to a class attribute and then using it in
+a later example), you will get explicit errors.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We've also provided a new API that lets you create temporary scopes in
+arbitrary places (such as a &lt;code&gt;before(:context)&lt;/code&gt; hook):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;describe&lt;/span&gt; &lt;span class="no"&gt;MyWebCrawler&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="n"&gt;before&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:context&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="no"&gt;RSpec&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Mocks&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;with_temporary_scope&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+      &lt;span class="n"&gt;allow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="no"&gt;MyWebCrawler&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;receive&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:crawl_depth_limit&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;and_return&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+      &lt;span class="vi"&gt;@crawl_results&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;MyWebCrawler&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;perform_crawl_on&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"http://some-host.com/"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;end&lt;/span&gt; &lt;span class="c1"&gt;# verification and resets happen when the block completes&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+
+  &lt;span class="c1"&gt;# ...&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thanks to &lt;a href="https://github.com/samphippen"&gt;Sam Phippen&lt;/a&gt; for helping with
+&lt;a href="https://github.com/rspec/rspec-mocks/pull/449"&gt;implementing&lt;/a&gt; these changes,
+and &lt;a href="https://github.com/skalee"&gt;Sebastian Skałacki&lt;/a&gt; for suggesting the new
+&lt;code&gt;with_temporary_scope&lt;/code&gt; feature.&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-mocks/issues/240"&gt;rspec-mocks #240 - original discussion&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-mocks/pull/519"&gt;rspec-mocks #519 - &lt;code&gt;with_temporary_scope&lt;/code&gt; implementation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="anyinstance-implementation-blocks-yield-the-receiver"&gt;&lt;code&gt;any_instance&lt;/code&gt; implementation blocks yield the receiver&lt;/h3&gt;
+
+&lt;p&gt;When providing an implementation block for a method stub it can be
+useful to do some calculation based on the state of the object.
+Unfortunately, there wasn't a simple way to do this when using
+&lt;code&gt;any_instance&lt;/code&gt; in RSpec 2. In RSpec 3, the receiver is yielded
+as the first argument to an &lt;code&gt;any_instance&lt;/code&gt; implementation block,
+making this easy:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="n"&gt;allow_any_instance_of&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="no"&gt;Employee&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;to&lt;/span&gt; &lt;span class="n"&gt;receive&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:salary&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;employee&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;currency&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="n"&gt;usd_amount&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;50_000&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10_000&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;employee&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;years_worked&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="n"&gt;currency&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;from_usd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;usd_amount&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+
+&lt;span class="n"&gt;employee&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Employee&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;23&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;salary&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;employee&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;salary&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="no"&gt;Currency&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:CAD&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thanks to &lt;a href="https://github.com/samphippen"&gt;Sam Phippen&lt;/a&gt; for
+&lt;a href="https://github.com/rspec/rspec-mocks/pull/351"&gt;implementing&lt;/a&gt; this.&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-mocks/issues/175"&gt;rspec-mocks #175 - original discussion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="rspec-rails"&gt;rspec-rails&lt;/h2&gt;
+
+&lt;h3 id="file-type-inference-disabled-by-default"&gt;File-type inference disabled by default&lt;/h3&gt;
+
+&lt;p&gt;rspec-rails automatically adds metadata to specs based on their location on the
+filesystem. This is confusing to new users, and not desirable for some veteran
+users.&lt;/p&gt;
+
+&lt;p&gt;In RSpec 3, this behavior must be explicitly enabled:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="c1"&gt;# spec/spec_helper.rb&lt;/span&gt;
+&lt;span class="no"&gt;RSpec&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;configure&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;infer_spec_type_from_file_location!&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Since this assumed behavior is so prevalent in tutorials, the default generated
+configuration still enables this.&lt;/p&gt;
+
+&lt;p&gt;To explicitly tag specs without using automatic inference, set the &lt;code&gt;type&lt;/code&gt;
+metadata:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight ruby"&gt;&lt;span class="no"&gt;RSpec&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;describe&lt;/span&gt; &lt;span class="no"&gt;ThingsController&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;type: :controller&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="c1"&gt;# Equivalent to being in spec/controllers&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The different available types are documented in each of the different spec
+types, for instance &lt;a href="https://relishapp.com/rspec/rspec-rails/v/3-0/docs/controller-specs"&gt;documentation for controller
+specs&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-rails/issues/662"&gt;rspec-rails #662 - original discussion&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-rails/pull/970"&gt;rspec-rails #970 - implementation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="extracted-activemodel-mocks-support"&gt;Extracted activemodel mocks support&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;mock_model&lt;/code&gt; and &lt;code&gt;stub_model&lt;/code&gt; have been extracted into the &lt;a href="https://github.com/rspec/rspec-activemodel-mocks"&gt;rspec-activemodel-mocks
+gem&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thanks to &lt;a href="https://github.com/thomas-holmes"&gt;Thomas Holmes&lt;/a&gt; for doing the
+extraction and for offering to maintain the new gem.&lt;/p&gt;
+
+&lt;h3 id="dropped-webrat-support"&gt;Dropped webrat support&lt;/h3&gt;
+
+&lt;p&gt;Webrat support has been removed. Use capybara instead.&lt;/p&gt;
+
+&lt;h3 id="anonymous-controller-improvements"&gt;Anonymous controller improvements&lt;/h3&gt;
+
+&lt;p&gt;rspec-rails has long allowed you to create anonymous controllers for testing.
+In RSpec 3 they have received some improvements:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;By default they will inherit from the described class rather than
+&lt;code&gt;AppplicationController&lt;/code&gt;. This behaviour can be disabled with the
+&lt;code&gt;infer_base_class_for_anonymous_controllers&lt;/code&gt; configuration option.&lt;/li&gt;
+  &lt;li&gt;Many bugfixes when using in "non-standard" contexts, such as with abstract
+parents or with no &lt;code&gt;ApplicationController&lt;/code&gt;. If you have had issues with
+anonymous controllers in the past, now would be a good time to try them
+again.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://relishapp.com/rspec/rspec-rails/v/3-0/docs/controller-specs/anonymous-controller"&gt;Documentation - Anonymous controllers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-rails/pull/893"&gt;rspec-rails #893 - Enable infering base class by default&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-rails/pull/905"&gt;rspec-rails #905 - Fix anonymous controller route helpers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-rails/pull/924"&gt;rspec-rails #924 - Don't assume presence of ApplicationController&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="final-words"&gt;Final words&lt;/h2&gt;
+
+&lt;p&gt;As always, full changelogs are available for each for the subprojects:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-core/blob/master/Changelog.md"&gt;rspec-core&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-expectations/blob/master/Changelog.md"&gt;rspec-expectations&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-mocks/blob/master/Changelog.md"&gt;rspec-mocks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/rspec/rspec-rails/blob/master/Changelog.md"&gt;rspec-rails&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;RSpec 3 is the first major release of RSpec in nearly 4 years. It
+represents a huge amount of work from a large number of contributors.&lt;/p&gt;
+
+&lt;p&gt;We hope you like the new changes as much as we do, no matter how you use RSpec.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks to Xavier Shay for helping write this blog post and to Jon Rowe,
+Sam Phippen and Aaron Kromer for proofreading it.&lt;/em&gt;&lt;/p&gt;
+
+</content>
+  </entry>
+</feed>
