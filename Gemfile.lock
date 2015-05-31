@@ -166,6 +166,7 @@ PLATFORMS
 DEPENDENCIES
   bourbon
   builder (~> 3.0)
+  i18n
   middleman (~> 3.3.6)
   middleman-blog
   middleman-deploy

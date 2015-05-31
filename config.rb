@@ -1,3 +1,5 @@
+require_relative 'translation_config'
+
 # Bower specific setup
 after_configuration do
   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
