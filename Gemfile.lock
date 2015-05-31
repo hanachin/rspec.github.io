@@ -127,6 +127,8 @@ GEM
     puma (2.11.3)
       rack (>= 1.1, < 2.0)
     rack (1.6.0)
+    rack-contrib (1.2.0)
+      rack (>= 0.9.1)
     rack-livereload (0.3.15)
       rack
     rack-test (0.6.3)
@@ -178,4 +180,5 @@ DEPENDENCIES
   neat
   nokogiri
   puma
+  rack-contrib
   slim

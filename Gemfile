@@ -20,3 +20,4 @@ gem 'nokogiri'
 
 # For run web process in Procfile
 gem 'puma'
+gem 'rack-contrib'
