@@ -1,4 +1,5 @@
-require_relative 'translation_config'
+require 'slim/translator'
+activate :i18n, langs: %i(en ja)
 
 # Bower specific setup
 after_configuration do
