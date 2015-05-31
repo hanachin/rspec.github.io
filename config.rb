@@ -101,7 +101,13 @@ end
 
 helpers do
   def primary_page_class
-    page_classes.split(" ").first
+    (page_classes.split(' ') - langs.map(&:to_s)).map {|page_class|
+      if l = langs.detect {|l| page_class.start_with?("#{l}_") }
+        page_class["#{l}_".size..-1]
+      else
+        page_class
+      end
+    }.first
   end
 
   def asciinema_video(id, speed: 1)
