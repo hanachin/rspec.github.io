@@ -11,9 +11,9 @@ class DumpMissingTranslations
     keys = e.keys.dup
     key = keys.pop
     missing_translations = keys.inject(self.missing_translations) {|missing_translations, key|
-      missing_translations.has_key?(key) ? missing_translations[key] : missing_translations[key] = {}
+      missing_translations.has_key?(key.to_s) ? missing_translations[key.to_s] : missing_translations[key.to_s] = {}
     }
-    missing_translations[key] = text
+    missing_translations[key.to_s] = text
     text
   end
 end
