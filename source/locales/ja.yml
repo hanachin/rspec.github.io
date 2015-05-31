@@ -1,0 +1,386 @@
+---
+en:
+  Behaviour Driven: Behaviour Driven
+  Development for Ruby: Development for Ruby.
+  Making TDD Productive and Fun: Making TDD Productive and Fun.
+  Let's get started!: Let's get started!
+  ? |-
+    To kick things off, install RSpec and run <code>rspec --init</code> to
+    set up your project to use RSpec
+  : |-
+    To kick things off, install RSpec and run <code>rspec --init</code> to
+    set up your project to use RSpec.
+  ? |-
+    Start with a very simple example that expresses some basic desired
+    behaviour
+  : |-
+    Start with a very simple example that expresses some basic desired
+    behaviour.
+  Run the example and watch it fail: Run the example and watch it fail.
+  Implement that basic behaviour: Implement that basic behaviour...
+  Run the example and bask in the joy that is green: Run the example and bask in the
+    joy that is green.
+  Take very small steps: Take very small steps
+  Don’t rush ahead with more code:
+    ? |2-
+       Instead, add another example and let
+      it guide you to what you have to do next
+    : ? |2-
+         And don’t forget to take time
+        to refactor your code before it gets messy
+      : ? |2-
+           You should keep your code
+          clean at every step of the way
+        : |-
+          Don’t rush ahead with more code. Instead, add another example and let
+          it guide you to what you have to do next. And don’t forget to take time
+          to refactor your code before it gets messy. You should keep your code
+          clean at every step of the way.
+  The RSpec Book: The RSpec Book
+  The RSpec Book will introduce you to RSpec, Cucumber, and a number of other tools that make up the Ruby BDD family:
+    ? " Replete with tutorials and practical examples, the RSpec Book will help you
+      get your BDD on, taking you from executable requirements to working software
+      that is clean, well tested, well documented, flexible and highly maintainable"
+    : The RSpec Book will introduce you to RSpec, Cucumber, and a number of other
+      tools that make up the Ruby BDD family. Replete with tutorials and practical
+      examples, the RSpec Book will help you get your BDD on, taking you from executable
+      requirements to working software that is clean, well tested, well documented,
+      flexible and highly maintainable.
+  Created with the assistance of %1: Created with the assistance of %1
+  <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en">: <html class="no-js lt-ie9 lt-ie8
+    lt-ie7" lang="en">
+  <html class="no-js lt-ie9 lt-ie8" lang="en">: <html class="no-js lt-ie9 lt-ie8"
+    lang="en">
+  <html class="no-js lt-ie9" lang="en">: <html class="no-js lt-ie9" lang="en">
+  "<!--[if gt IE 8]<!-->": "<!--[if gt IE 8]<!-->"
+  "<!--<![endif]-->": "<!--<![endif]-->"
+  History: History
+  ? |-
+    RSpec began life in 2005 as an experiment by Steven Baker, with early
+    contributions from Dave Astels and Aslak Hellesøy
+  : ? |2-
+       David Chelimsky
+      joined the team that summer, and accepted leadership of the project in
+      2006
+    : ? |2-
+         David also built rspec-rails, which provided tight integration with
+        %1
+      : |-
+        RSpec began life in 2005 as an experiment by Steven Baker, with early
+        contributions from Dave Astels and Aslak Hellesøy. David Chelimsky
+        joined the team that summer, and accepted leadership of the project in
+        2006. David also built rspec-rails, which provided tight integration with
+        %1.
+  RSpec 1:
+    ? |-
+      0 was released in May of 2007, and included many of the
+      features that are still present in RSpec today
+    : ? |2-
+         RSpec 1's runner
+        had many great features but had reached a point where it was slow
+        and hard to continue evolving it
+      : |-
+        RSpec 1.0 was released in May of 2007, and included many of the
+        features that are still present in RSpec today. RSpec 1's runner
+        had many great features but had reached a point where it was slow
+        and hard to continue evolving it.
+  ? |-
+    In late 2008, Chad Humphries built
+    %1,
+    a new spec runner, to address these problems
+  : ? |2-
+       Micronaut also included a new
+      metadata system that provided much greater flexibility than RSpec 1 had
+    : |-
+      In late 2008, Chad Humphries built
+      %1,
+      a new spec runner, to address these problems. Micronaut also included a new
+      metadata system that provided much greater flexibility than RSpec 1 had.
+  In early 2010, after the release of RSpec 1:
+    ? |-
+      3, David and Chad
+      %1
+    : ? |2-
+
+        The project got split into separate, modular pieces that could be used
+        individually or all together
+      : ? |2-
+           Micronaut was used as the basis of rspec-core,
+          the new runner
+        : ? |2-
+             %2
+            in October 2010 after nearly a year of effort
+          : |-
+            In early 2010, after the release of RSpec 1.3, David and Chad
+            %1.
+            The project got split into separate, modular pieces that could be used
+            individually or all together. Micronaut was used as the basis of rspec-core,
+            the new runner. %2
+            in October 2010 after nearly a year of effort.
+  ? |-
+    In November 2012, after leading the project for 6 years, David decided to
+    %1
+  : ? |2-
+
+      He asked Myron Marston to take over as lead RSpec maintainer and Andy
+      Lindeman to take over as lead rspec-rails maintainer
+    : |-
+      In November 2012, after leading the project for 6 years, David decided to
+      %1.
+      He asked Myron Marston to take over as lead RSpec maintainer and Andy
+      Lindeman to take over as lead rspec-rails maintainer.
+  ? |-
+    %1
+    began in July 2013 and it
+    %2
+  : ? |2-
+
+      RSpec 3 was a bit of a "spring cleaning" for RSpec, removing much cruft
+      (some of which dated back to RSpec 1!)
+    : ? |2-
+         It also provided
+        %3,
+        %4,
+        a new syntax that allows RSpec to be used with no monkey patching, and
+        %5
+      : ? |2-
+
+          Andy Lindeman retired from the team and asked Aaron Kromer to take over as rspec-rails maintainer
+        : |-
+          %1
+          began in July 2013 and it
+          %2.
+          RSpec 3 was a bit of a "spring cleaning" for RSpec, removing much cruft
+          (some of which dated back to RSpec 1!). It also provided
+          %3,
+          %4,
+          a new syntax that allows RSpec to be used with no monkey patching, and
+          %5.
+          Andy Lindeman retired from the team and asked Aaron Kromer to take over as rspec-rails maintainer.
+  ? |-
+    Today, RSpec continues to improve and evolve thanks to the input of a large
+    community and the work of hundreds of contributors
+  : |-
+    Today, RSpec continues to improve and evolve thanks to the input of a large
+    community and the work of hundreds of contributors.
+  Minds Behind the Scene: Minds Behind the Scene
+  THE TEAM: THE TEAM
+  THE ALUMNI: THE ALUMNI
+  "(Listed alphabetically by surname)": "(Listed alphabetically by surname)"
+  API Documentation: API Documentation
+  The API documentation contains details about all public APIs supported by RSpec:
+    ? |2-
+
+      We consider these the primary docs and will treat these APIs according to the
+      policies of %1
+    : ? |2-
+         We encourage you
+        to use only public APIs as private APIs may change in any release without warning
+      : ? |2-
+
+          If you have a use case not supported by the existing public APIs, %2
+          and we'll be glad to add an API for you or make an existing private API public
+        : |-
+          The API documentation contains details about all public APIs supported by RSpec.
+          We consider these the primary docs and will treat these APIs according to the
+          policies of %1. We encourage you
+          to use only public APIs as private APIs may change in any release without warning.
+          If you have a use case not supported by the existing public APIs, %2
+          and we'll be glad to add an API for you or make an existing private API public.
+  ? |-
+    RSpec is composed of multiple libraries, which are designed to work together, or
+    can be used independently with other testing tools like %1
+    or %2
+  : " The parts of RSpec are:": |-
+      RSpec is composed of multiple libraries, which are designed to work together, or
+      can be used independently with other testing tools like %1
+      or %2. The parts of RSpec are:
+  "%1:&nbsp;": "%1:&nbsp;"
+  "%1&nbsp;Versions:&nbsp;%2": "%1&nbsp;Versions:&nbsp;%2"
+  Relish: Relish
+  RSpec is also documented through executable examples on Relish:
+    ? |2-
+       The examples
+      are written in an "end-to-end" style demonstrating the use of various RSpec
+      features in the context of executable spec files
+    : ? |2-
+         It's a good resource for
+        getting a survey of what RSpec is capable of and seeing how the pieces can
+        be used together, but for detailed documentation about a particular API or
+        feature, we recommend the API docs
+      : ? |2-
+           The relish examples are executed via
+          Cucumber to ensure they are always up-to-date with the current code base
+        : |-
+          RSpec is also documented through executable examples on Relish. The examples
+          are written in an "end-to-end" style demonstrating the use of various RSpec
+          features in the context of executable spec files. It's a good resource for
+          getting a survey of what RSpec is capable of and seeing how the pieces can
+          be used together, but for detailed documentation about a particular API or
+          feature, we recommend the API docs. The relish examples are executed via
+          Cucumber to ensure they are always up-to-date with the current code base.
+  Upgrading from RSpec 2: Upgrading from RSpec 2
+  Step-by-step Instructions: Step-by-step Instructions
+  Start with a green test suite on RSpec 2:
+    'x:': 'Start with a green test suite on RSpec 2.x:'
+  Install RSpec 2:
+    '99': Install RSpec 2.99.
+  Check your test suite and ensure it's still green:
+    ? |2-
+       (It should be, but
+      we may have made a mistake -- if it breaks anything, please report
+      a bug!)
+    : " Now would be a good time to commit": |-
+        Check your test suite and ensure it's still green. (It should be, but
+        we may have made a mistake -- if it breaks anything, please report
+        a bug!). Now would be a good time to commit.
+  ? |-
+    You'll notice a bunch of deprecation warnings printed off at the
+    end of the spec run
+  : ? |2-
+       These may be truncated since we don't to
+      spam you with the same deprecation warning over and over again
+    : ? |2-
+         To
+        get the full list of deprecations, you can pipe them into a file
+        by passing the <code>--deprecation-out path/to/file</code> command line option
+      : |-
+        You'll notice a bunch of deprecation warnings printed off at the
+        end of the spec run. These may be truncated since we don't to
+        spam you with the same deprecation warning over and over again. To
+        get the full list of deprecations, you can pipe them into a file
+        by passing the <code>--deprecation-out path/to/file</code> command line option.
+  ? |-
+    If you want to understand all of what is being deprecated, it's a good
+    idea to read through the deprecation messages
+  : ? |2-
+        In some cases, you have
+      choices -- such as continuing to use the <code>have</code> collection
+      cardinality matchers via the extracted
+      %1
+      gem, or by rewriting the expectation expression to something like
+      <code>expect(list
+    : size):
+        to eq(3)</code>: |-
+          If you want to understand all of what is being deprecated, it's a good
+          idea to read through the deprecation messages.  In some cases, you have
+          choices -- such as continuing to use the <code>have</code> collection
+          cardinality matchers via the extracted
+          %1
+          gem, or by rewriting the expectation expression to something like
+          <code>expect(list.size).to eq(3)</code>.
+  Install transpec, as it will save you a heap of time:
+    ? |2-
+       (Note that this need
+      not go into your <code>Gemfile</code>: you run <code>transpec</code> as a standalone executable
+      outside the context of your bundle)
+    : |-
+      Install transpec, as it will save you a heap of time. (Note that this need
+      not go into your <code>Gemfile</code>: you run <code>transpec</code> as a standalone executable
+      outside the context of your bundle).
+  Run transpec on your project:
+    ? " Check <code>transpec --help</code> or \n%1\nfor a full list of options"
+    : "Run transpec on your project. Check <code>transpec --help</code> or \n%1\nfor
+      a full list of options."
+  ? |-
+    Run the test suite (it should still be green but it's always good to
+    check!) and commit
+  : |-
+    Run the test suite (it should still be green but it's always good to
+    check!) and commit.
+  ? |-
+    If there are any remaining deprecation warnings (transpec doesn't quite
+    handle all of the warnings you may get), deal with them
+  : |-
+    If there are any remaining deprecation warnings (transpec doesn't quite
+    handle all of the warnings you may get), deal with them.
+  Once you've got a deprecation-free test suite running against RSpec 2:
+    ? |-
+      99,
+      you're ready to upgrade to RSpec 3
+    : " Install RSpec 3": |-
+        Once you've got a deprecation-free test suite running against RSpec 2.99,
+        you're ready to upgrade to RSpec 3. Install RSpec 3.
+  Run your test suite:
+    " It should still be green":
+      ? |2-
+         If anything fails, please
+        open a Github issue -- we consider it a bug! Note that you may still get
+        a few additional deprecation warnings on RSpec 3 that weren't present on
+        2
+      : '99':
+          ? |2-
+             This is normal -- there are a few things we couldn't easily deprecate in
+            2
+          : 99 and remove in 3:
+              0, so they trigger deprecations in 3:
+                ? |-
+                  0 with the plan
+                  to remove them in RSpec 4
+                : |-
+                  Run your test suite. It should still be green. If anything fails, please
+                  open a Github issue -- we consider it a bug! Note that you may still get
+                  a few additional deprecation warnings on RSpec 3 that weren't present on
+                  2.99. This is normal -- there are a few things we couldn't easily deprecate in
+                  2.99 and remove in 3.0, so they trigger deprecations in 3.0 with the plan
+                  to remove them in RSpec 4.
+  We recommend running <code>transpec</code> a second time:
+    ? |2-
+       There are some changes that
+      transpec is only able to make when your project is on RSpec 3
+    : |-
+      We recommend running <code>transpec</code> a second time. There are some changes that
+      transpec is only able to make when your project is on RSpec 3.
+  Commit and enjoy using the latest RSpec release!: Commit and enjoy using the latest
+    RSpec release!
+  Get Help: Get Help
+  Mailing List: Mailing List
+  ? |-
+    For general support and development enquirines we recomment joining
+    the rspec mailing list / google group
+  : ? |2-
+       There are many experienced
+      rspec developers on this list who are normally only to happy to help
+      solve your development woes
+    : |-
+      For general support and development enquirines we recomment joining
+      the rspec mailing list / google group. There are many experienced
+      rspec developers on this list who are normally only to happy to help
+      solve your development woes.
+  'See:': 'See:'
+  " https://groups":
+    google:
+      com/forum/#!forum/rspec: " https://groups.google.com/forum/#!forum/rspec"
+  " for more information": " for more information."
+  IRC: IRC
+  ? |-
+    If you prefer, you can join the `#rspec` channel on freenode, there are
+    often people willing to help hanging around, although the core team do
+    not monitor this continuously they are often around to help out
+  : |-
+    If you prefer, you can join the `#rspec` channel on freenode, there are
+    often people willing to help hanging around, although the core team do
+    not monitor this continuously they are often around to help out.
+  Github: Github
+  ? |-
+    If you encounter a bug in rspec itself you are encouraged to open up
+    an issue on the appropriate repository on Github
+  : |-
+    If you encounter a bug in rspec itself you are encouraged to open up
+    an issue on the appropriate repository on Github.
+  For bugs with rspec-rails:&nbsp;: For bugs with rspec-rails:&nbsp;
+  For bugs with rspec-core:&nbsp;: For bugs with rspec-core:&nbsp;
+  " (runner, configuration, etc)": " (runner, configuration, etc)"
+  For bugs with rspec-mocks:&nbsp;: For bugs with rspec-mocks:&nbsp;
+  " (doubles, spies, etc)": " (doubles, spies, etc)"
+  For bugs with rspec-expectations:&nbsp;: For bugs with rspec-expectations:&nbsp;
+  " (matchers)": " (matchers)"
+  Please note we prefer you don't open general support requests on Github: Please
+    note we prefer you don't open general support requests on Github.
+  Contributing: Contributing
+  ? |-
+    If you have an idea to improve RSpec or find a bug, you are encouraged
+    to file a pull request or issue with the appropriate repository on Github
+  : |-
+    If you have an idea to improve RSpec or find a bug, you are encouraged
+    to file a pull request or issue with the appropriate repository on Github.
