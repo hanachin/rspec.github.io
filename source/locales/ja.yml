@@ -49,7 +49,7 @@ en:
   <html class="no-js lt-ie9" lang="en">: <html class="no-js lt-ie9" lang="en">
   "<!--[if gt IE 8]<!-->": "<!--[if gt IE 8]<!-->"
   "<!--<![endif]-->": "<!--<![endif]-->"
-  History: History
+  History: 歴史
   ? |-
     RSpec began life in 2005 as an experiment by Steven Baker, with early
     contributions from Dave Astels and Aslak Hellesøy
@@ -61,11 +61,10 @@ en:
          David also built rspec-rails, which provided tight integration with
         %1
       : |-
-        RSpec began life in 2005 as an experiment by Steven Baker, with early
-        contributions from Dave Astels and Aslak Hellesøy. David Chelimsky
-        joined the team that summer, and accepted leadership of the project in
-        2006. David also built rspec-rails, which provided tight integration with
-        %1.
+        RSpecは2005年にSteven Bakerによる実験と、Dave AstelsとAslak Hellesøyの早期のコントリビューション
+        により生まれました。
+        その夏にDavid Chelimskyがチームに加わり、そして2006年にプロジェクトのリーダーシップを取りました。
+        Davidは同様に %1 との密な統合を提供するrspec-railsをつくりました。
   RSpec 1:
     ? |-
       0 was released in May of 2007, and included many of the
@@ -75,10 +74,10 @@ en:
         had many great features but had reached a point where it was slow
         and hard to continue evolving it
       : |-
-        RSpec 1.0 was released in May of 2007, and included many of the
-        features that are still present in RSpec today. RSpec 1's runner
-        had many great features but had reached a point where it was slow
-        and hard to continue evolving it.
+        RSpec 1.0は2007年の５月にリリースされました、それは今日のRSpecでもいまだに
+        含まれている多くの機能を備えていました。
+        RSpec 1のrunnerは多くの優れた機能をもっていましたが、それは遅く、
+        進化を続けるには難しいポイントに差し掛かっていました。
   ? |-
     In late 2008, Chad Humphries built
     %1,
@@ -87,10 +86,8 @@ en:
        Micronaut also included a new
       metadata system that provided much greater flexibility than RSpec 1 had
     : |-
-      In late 2008, Chad Humphries built
-      %1,
-      a new spec runner, to address these problems. Micronaut also included a new
-      metadata system that provided much greater flexibility than RSpec 1 had.
+      2008年の後半、Chad Humphriesはそれらの問題に取り組んだ新しいspec runner、 %1 を作りました。
+      また Micronaut はRSpec 1より優れた柔軟性を提供する新しいメタデータシステムを取り入れました。
   In early 2010, after the release of RSpec 1:
     ? |-
       3, David and Chad
@@ -106,6 +103,7 @@ en:
              %2
             in October 2010 after nearly a year of effort
           : |-
+            2010年の上半期、RSpec 1.3がリリースされたあと、DavidとChad
             In early 2010, after the release of RSpec 1.3, David and Chad
             %1.
             The project got split into separate, modular pieces that could be used
