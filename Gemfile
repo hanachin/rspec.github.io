@@ -17,3 +17,6 @@ gem "builder", "~> 3.0"
 
 # For HTML-aware blog post summaries.
 gem 'nokogiri'
+
+# For run web process in Procfile
+gem 'puma'
