@@ -1,26 +1,23 @@
 ---
 en:
-  Behaviour Driven: Behaviour Driven
-  Development for Ruby: Development for Ruby.
-  Making TDD Productive and Fun: Making TDD Productive and Fun.
-  Let's get started!: Let's get started!
+  Behaviour Driven: 振る舞い駆動
+  Development for Ruby: 開発 for Ruby
+  Making TDD Productive and Fun: TDDを生産的で楽しくします
+  Let's get started!: はじめよう!
   ? |-
     To kick things off, install RSpec and run <code>rspec --init</code> to
     set up your project to use RSpec
   : |-
-    To kick things off, install RSpec and run <code>rspec --init</code> to
-    set up your project to use RSpec.
+    まずはじめに、RSpecをインストールし、<code>rspec --init</code>を実行して、あなたのプロジェクトでRSpecを使う設定をします。
   ? |-
     Start with a very simple example that expresses some basic desired
     behaviour
   : |-
-    Start with a very simple example that expresses some basic desired
-    behaviour.
-  Run the example and watch it fail: Run the example and watch it fail.
-  Implement that basic behaviour: Implement that basic behaviour...
-  Run the example and bask in the joy that is green: Run the example and bask in the
-    joy that is green.
-  Take very small steps: Take very small steps
+    非常にシンプルなexampleからはじめます、それはいくつかの基本的に求められている振る舞いを表現したものです。
+  Run the example and watch it fail: exampleを実行しそれが失敗するのを見ます。
+  Implement that basic behaviour: その基本的な振る舞いを実装します...
+  Run the example and bask in the joy that is green: exampleを実行し、それがグリーンである喜びに浸ります。
+  Take very small steps: 一歩ずつ進むこと
   Don’t rush ahead with more code:
     ? |2-
        Instead, add another example and let
@@ -32,20 +29,18 @@ en:
            You should keep your code
           clean at every step of the way
         : |-
-          Don’t rush ahead with more code. Instead, add another example and let
-          it guide you to what you have to do next. And don’t forget to take time
-          to refactor your code before it gets messy. You should keep your code
-          clean at every step of the way.
+          コードをモリモリ書いて急いで先へ進もうとしないでください。
+          そうするよりも、あらたなexampleを追加して、あなたが次に何をすればいいのか導いてもらいましょう。
+          そして、あなたのコードが汚くなる前に、時間をかけてリファクタリングするのを忘れないようにしよう。
+          あなたが一歩すすむたび、あなたはコードの綺麗さを保つべきです。
   The RSpec Book: The RSpec Book
   The RSpec Book will introduce you to RSpec, Cucumber, and a number of other tools that make up the Ruby BDD family:
     ? " Replete with tutorials and practical examples, the RSpec Book will help you
       get your BDD on, taking you from executable requirements to working software
       that is clean, well tested, well documented, flexible and highly maintainable"
-    : The RSpec Book will introduce you to RSpec, Cucumber, and a number of other
-      tools that make up the Ruby BDD family. Replete with tutorials and practical
-      examples, the RSpec Book will help you get your BDD on, taking you from executable
-      requirements to working software that is clean, well tested, well documented,
-      flexible and highly maintainable.
+    : The RSpec BookはあなたにRSpec、Cucumber、そしてRubyのBDDファミリーを構成するその他のツールを紹介してくれるでしょう。
+      チュートリアルと十分に備わった実践的な例により、The RSpec BookはあなたがBDDをはじめるのを助け、
+      あなたを実行可能な要求から、綺麗で、よくテストされ、よくドキュメント化され、柔軟性が高く、保守性の高い動作するソフトウェアへと導いてくれるでしょう。
   Created with the assistance of %1: Created with the assistance of %1
   <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en">: <html class="no-js lt-ie9 lt-ie8
     lt-ie7" lang="en">
